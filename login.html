@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Salon | VIP Login</title>
+    <!-- Favicon intentionally removed per user request -->
+     <link rel="icon" type="image/png" href="../Images/makeup (2).png">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body data-theme="light">
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            
+            <div class="auth-top-row">
+                <div class="auth-header-text">
+                    Don't have an account? <a href="signup.html">Sign up &rarr;</a>
+                </div>
+                <!-- Top Right Controls -->
+                <div class="auth-controls">
+                    <!-- Theme Toggle -->
+                    <button class="ctrl-btn" aria-label="Toggle Theme" onclick="toggleAuthTheme()" title="Toggle Theme">
+                        <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <!-- RTL Toggle -->
+                    <button class="ctrl-btn-text" aria-label="Toggle RTL" onclick="toggleRTL()" title="Toggle RTL">
+                        RTL
+                    </button>
+                </div>
+            </div>
+
+            <!-- Branding -->
+            <a href="index.html" class="auth-brand">
+                Glow<span>Salon</span>
+            </a>
+
+            <!-- Titles -->
+            <div class="pre-title">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+                WELCOME BACK
+            </div>
+            <h1 class="auth-title">Sign <span>In</span></h1>
+
+            <!-- Social Logins -->
+            <div class="social-grid">
+                <button class="btn-social" aria-label="Sign in with Google">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.333.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                    Google
+                </button>
+                <button class="btn-social" aria-label="Sign in with Facebook">
+                    <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Facebook
+                </button>
+                <button class="btn-social" aria-label="Sign in with Apple">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.04 2.26-.79 3.59-.75 1.58.05 2.76.74 3.53 1.87-3.06 1.76-2.58 5.76.4 6.94-.74 1.83-1.68 3.5-3.04 4.11zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                    Apple
+                </button>
+            </div>
+
+            
+
+            <form class="auth-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrap">
+                        <svg class="input-icon icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <input type="email" id="email" class="form-input" required autocomplete="email" placeholder="your@email.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrap">
+                        <svg class="input-icon icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <input type="password" id="password" class="form-input" required autocomplete="current-password" placeholder="••••••••">
+                        <button type="button" class="pwd-toggle" aria-label="Toggle password visibility" onclick="togglePassword('password')">
+                            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div style="text-align: right; margin-top: -0.5rem; margin-bottom: 0.5rem;">
+                    <a href="#" style="color: var(--auth-text-muted); font-size: 0.8rem; text-decoration: none;">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-auth">Sign In &rarr;</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Interactive Logic -->
+    <script>
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = input.nextElementSibling;
+            if (input.type === "password") {
+                input.type = "text";
+                button.innerHTML = '<svg viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>';
+            } else {
+                input.type = "password";
+                button.innerHTML = '<svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>';
+            }
+        }
+
+        function toggleAuthTheme() {
+            const body = document.body;
+            const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('glow_theme', newTheme);
+        }
+
+        function toggleRTL() {
+            const html = document.documentElement;
+            const currentDir = html.getAttribute('dir');
+            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+            html.setAttribute('dir', newDir);
+            localStorage.setItem('glow_dir', newDir);
+        }
+
+        // Initialize state from LocalStorage to prevent flashing
+        const savedTheme = localStorage.getItem('glow_theme');
+        if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+        
+        const savedDir = localStorage.getItem('glow_dir');
+        if (savedDir) document.documentElement.setAttribute('dir', savedDir);
+    </script>
+</body>
+</html>

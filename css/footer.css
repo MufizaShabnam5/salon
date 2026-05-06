@@ -1,0 +1,162 @@
+/* 
+ * ==========================================
+ * LUXE ELEGANCE FOOTER STYLES
+ * ==========================================
+ */
+
+.luxe-footer {
+    background-color: var(--nav-dropdown-bg); /* Inherits from navbar.css variables */
+    border-top: 1px solid var(--nav-border);
+    padding: 4rem 0 1rem;
+    font-family: var(--nav-font-ui);
+    color: var(--nav-text);
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand .footer-logo {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-description {
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--nav-border);
+    color: var(--nav-text);
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: var(--nav-accent-primary);
+    border-color: var(--nav-accent-primary);
+    color: #fff;
+    transform: translateY(-3px);
+}
+[data-theme='dark'] .footer-socials a:hover {
+    color: #1A1A1A; /* Better contrast in dark mode on hover */
+}
+
+.footer-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.footer-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--nav-text);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--nav-text);
+    opacity: 0.8;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--nav-accent-primary);
+    transform: translateX(3px);
+}
+[dir="rtl"] .footer-links a:hover {
+    transform: translateX(-3px);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.contact-list svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--nav-accent-primary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--nav-border);
+    opacity: 0.7;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    color: var(--nav-text);
+}
+
+.footer-legal a:hover {
+    color: var(--nav-accent-primary);
+}
+
+/* Responsive Footer Breakpoints */
+@media (max-width: 1023px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 639px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

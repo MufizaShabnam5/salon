@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Glow Salon</title>
+<meta name="description" content="Get in touch with Glow Salon. Visit us in India or book your appointment online.">
+<!--<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A47C' stroke-width='1.5'><path d='M12 22c-4-4-6-8-6-12 0-3.5 2-6 6-8 4 2 6 4.5 6 8 0 4-2 8-6 12z'/></svg>">-->
+<link rel="icon" type="image/png" href="../Images/makeup (2).png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body data-theme="light">
+<div id="header-placeholder"></div>
+<main>
+
+<!-- HERO -->
+<section class="ct-hero">
+  <div class="ct-hero-overlay"></div>
+  <div class="ct-hero-content">
+    <span class="section-label">We Are Here For You</span>
+    <h1>Get In <em>Touch</em></h1>
+    <p>Visit our sanctuary, call us, or simply send a message — we will respond within 24 hours</p>
+  </div>
+</section>
+
+<!-- INFO CARDS -->
+<section class="ct-info-bar">
+  <div class="container">
+    <div class="ct-info-grid">
+      <div class="ct-info-card reveal">
+        <div class="ct-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h3>Our Location</h3>
+        <p>42, MG Road, Bengaluru<br>Karnataka 560001, India</p>
+        <a href="https://maps.google.com/?q=MG+Road+Bengaluru" target="_blank" class="ct-link">Get Directions →</a>
+      </div>
+      <div class="ct-info-card reveal reveal-delay-1">
+        <div class="ct-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        </div>
+        <h3>Phone & WhatsApp</h3>
+        <p>+91 98765 43210<br>+91 80 2222 3333</p>
+        <a href="tel:+919876543210" class="ct-link">Call Now →</a>
+      </div>
+      <div class="ct-info-card reveal reveal-delay-2">
+        <div class="ct-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Email Us</h3>
+        <p>hello@glowsalon.in<br>bookings@glowsalon.in</p>
+        <a href="mailto:hello@glowsalon.in" class="ct-link">Send Email →</a>
+      </div>
+      <div class="ct-info-card reveal reveal-delay-3">
+        <div class="ct-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Working Hours</h3>
+        <p>Mon – Sat: 9:00 AM – 8:00 PM<br>Sunday: 10:00 AM – 6:00 PM</p>
+        <a href="login.html" class="ct-link">Book Slot →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM + MAP -->
+<section class="ct-main">
+  <div class="container">
+    <div class="ct-main-grid">
+
+      <!-- CONTACT FORM -->
+      <div class="ct-form-wrap reveal-left">
+        <span class="section-label">Send A Message</span>
+        <h2>We'd Love to Hear From You</h2>
+        <div class="divider left"></div>
+        <p class="ct-form-sub">Fill in your details below and we will get back to you within one business day.</p>
+
+        <form class="ct-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="ct-row">
+            <div class="ct-field">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="Priya" required>
+            </div>
+            <div class="ct-field">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Sharma" required>
+            </div>
+          </div>
+          <div class="ct-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="priya@example.com" required>
+          </div>
+          <div class="ct-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210">
+          </div>
+          <div class="ct-field">
+            <label for="service">Service Interested In</label>
+            <select id="service">
+              <option value="" disabled selected>Select a service</option>
+              <option>Hair Services</option>
+              <option>Skin Care & Facials</option>
+              <option>Bridal Makeup</option>
+              <option>Spa & Relaxation</option>
+              <option>Luxury Nail Care</option>
+              <option>Luxury Pedicure</option>
+              <option>Wellness & Yoga</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="ct-field">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us how we can help you…"></textarea>
+          </div>
+          <button type="submit" class="btn-primary ct-submit">Send Message</button>
+          <div class="ct-success" id="ctSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Message sent! We'll be in touch soon.
+          </div>
+        </form>
+      </div>
+
+      <!-- MAP + SOCIAL -->
+      <div class="ct-right reveal-right">
+        <span class="section-label">Find Us</span>
+        <h2>We're Located In Bengaluru</h2>
+        <div class="divider left"></div>
+        <p class="ct-form-sub">Nestled in the heart of MG Road — India's premier beauty and wellness destination.</p>
+
+        <div class="ct-map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.9843073946617!2d77.60714987454839!3d12.975134987318086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sMG%20Road%2C%20Bengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1714640000000!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Glow Salon Location - MG Road Bengaluru India">
+          </iframe>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="ct-social-wrap">
+          <h4>Follow Us</h4>
+          <div class="ct-social-row">
+            <a href="#" class="ct-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="#" class="ct-social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook
+            </a>
+            <a href="#" class="ct-social-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="ct-cta">
+  <div class="container">
+    <div class="ct-cta-inner reveal">
+      <h2>Ready to Experience Glow?</h2>
+      <p>Book your appointment online in under a minute — no waiting, no hassle.</p>
+      <a href="login.html" class="btn-primary">Reserve Your Spot</a>
+    </div>
+  </div>
+</section>
+
+    <!-- Floating Contact Button -->
+    <a href="#" class="floating-wa" target="_blank" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      <span>Chat With Us</span>
+    </a>
+
+</main>
+<div id="footer-placeholder"></div>
+<script src="js/loadComponents.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Hero Animation
+  const hero = document.querySelector('.ct-hero');
+  if (hero) setTimeout(() => hero.classList.add('in-view'), 100);
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => obs.observe(el));
+});
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.querySelector('.ct-submit');
+  const originalText = btn.textContent;
+  btn.textContent = 'Sending…';
+  btn.style.opacity = '0.7';
+  btn.disabled = true;
+  
+  setTimeout(() => {
+    document.getElementById('contactForm').reset();
+    btn.textContent = originalText;
+    btn.style.opacity = '1';
+    btn.disabled = false;
+    const success = document.getElementById('ctSuccess');
+    success.classList.add('show');
+    setTimeout(() => success.classList.remove('show'), 5000);
+  }, 1200);
+}
+</script>
+</body>
+</html>

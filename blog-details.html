@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glow Journal | Article Detail</title>
+    <meta name="description" content="Explore detailed insights into beauty, skincare, and wellness from Glow Salon.">
+
+    <!-- Favicon -->
+    <!--<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A47C' stroke-width='1.5'><path d='M12 22c-4-4-6-8-6-12 0-3.5 2-6 6-8 4 2 6 4.5 6 8 0 4-2 8-6 12z'/></svg>">-->
+<link rel="icon" type="image/png" href="../Images/makeup (2).png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/blog.css">
+
+    <style>
+        /* Detail Page Specific Styling */
+        .details-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #111;
+            color: #fff;
+            margin-bottom: 4rem;
+        }
+        .details-hero-bg {
+            position: absolute; inset: 0;
+            background: url('images/blog_hero_main.png') center/cover no-repeat;
+            opacity: 0.5;
+        }
+        .details-hero-content { position: relative; z-index: 2; max-width: 800px; padding: 2rem; }
+        .details-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1rem; }
+        .details-hero em { font-style: italic; color: var(--color-primary); }
+
+        .blog-post-wrapper { display: none; }
+        .blog-post-wrapper.active { display: block; animation: fadeUp 0.8s ease both; }
+        
+        /* Remove Sidebar Layout for a cleaner single-column focus */
+        .post-layout-centered { max-width: 900px; margin: 0 auto 8rem; }
+        
+        .post-content { font-size: 1.15rem; line-height: 1.9; }
+        .post-content p { margin-bottom: 2rem; }
+        .post-content h2 { margin-block: 3rem 1.5rem; font-family: var(--font-logo); font-size: 2.5rem; }
+        
+        blockquote {
+            padding: 3rem; margin: 4rem 0;
+            background: var(--nav-dropdown-bg);
+            border-left: 4px solid var(--color-primary);
+            font-family: var(--font-logo); font-size: 1.8rem; font-style: italic;
+            color: var(--nav-text);
+        }
+
+        .post-navigation {
+            display: flex; justify-content: space-between;
+            padding-block: 4rem; border-top: 1px solid var(--nav-border);
+            margin-top: 6rem;
+        }
+
+        /* Dark Mode Overrides for internal styles */
+        body.blog-page[data-theme='dark'] .details-hero { background: #050505; }
+        body.blog-page[data-theme='dark'] .details-hero-bg { opacity: 0.2; }
+        body.blog-page[data-theme='dark'] blockquote { background: #1a1a1a; color: #f2f2f2; border-left-color: var(--color-primary); }
+        body.blog-page[data-theme='dark'] .post-content p, 
+        body.blog-page[data-theme='dark'] .post-content h2, 
+        body.blog-page[data-theme='dark'] .post-content { color: #f2f2f2; }
+        body.blog-page[data-theme='dark'] { background-color: #0F0F0F !important; }
+    </style>
+</head>
+<body data-theme="light" class="blog-page">
+
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        
+        <!-- ===================== GLOBAL HERO FOR DETAILS ===================== -->
+        <section class="details-hero">
+            <div class="details-hero-bg"></div>
+            <div class="details-hero-content reveal">
+                <span class="section-label">Glow Journal Detail</span>
+                <h1>Inside the <em>Art of Beauty</em></h1>
+                <p>Deep dives into the rituals, products, and philosophies that define the Glow experience.</p>
+            </div>
+        </section>
+
+        <!-- ===================== ARTICLE: SKINCARE (Featured) ===================== -->
+        <article id="skincare" class="blog-post-wrapper">
+            <div class="container post-layout-centered">
+                <div class="post-meta-main" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <span class="post-category">Skincare Rituals</span>
+                </div>
+                <h2>5 Ancient Skincare Rituals Reimagined for Modern Life</h2>
+                <div class="post-meta-main" style="justify-content: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--nav-border); padding-bottom: 2rem;">
+                    <span>By Elena Vance</span><span>May 15, 2024</span><span>8 Min Read</span>
+                </div>
+                
+                <div class="post-featured-img" style="margin-block: 4rem;"><img src="images/blog_skincare.png" alt="Skincare"></div>
+                
+                <div class="post-content">
+                    <p>In the rush of the 21st century, the concept of "ritual" often feels like a luxury we cannot afford. Yet, as our lives become increasingly digital and disconnected, these ancient practices offer more than just aesthetic results; they provide a vital tether to the physical world.</p>
+                    <p>At Glow Salon, we believe that true beauty is the outward reflection of inner harmony. By looking back at the traditions of ancient civilizations, we can find powerful tools that—when paired with modern science—transform our daily maintenance into a sacred act of self-care.</p>
+                    
+                    <h2>The Art of Lymphatic Drainage</h2>
+                    <p>Ancient Chinese medicine introduced the world to Gua Sha centuries ago. While originally used as a holistic treatment for various ailments, its application in facial care has become a modern phenomenon for a reason. By using gentle strokes with a stone tool, we encourage lymphatic drainage and reduce puffiness.</p>
+                    
+                    <blockquote>"Beauty is not just what you put on your skin, but how you move the energy beneath it."</blockquote>
+
+                    <h2>The Thermal Ritual</h2>
+                    <p>The contrast between heat and cold—a practice rooted deeply in Scandinavian and Roman bathhouse cultures—remains one of the most effective ways to detoxify the skin and invigorate the spirit. Our modern spa rituals often incorporate this principle to leave you feeling entirely renewed.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===================== ARTICLE: HAIRCARE ===================== -->
+        <article id="haircare" class="blog-post-wrapper">
+            <div class="container post-layout-centered">
+                <div class="post-meta-main" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <span class="post-category">Hair Care</span>
+                </div>
+                <h2>The Secret to Effortless Salon-Grade Curls at Home</h2>
+                <div class="post-meta-main" style="justify-content: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--nav-border); padding-bottom: 2rem;">
+                    <span>By Marcus Thorne</span><span>May 12, 2024</span><span>6 Min Read</span>
+                </div>
+                
+                <div class="post-featured-img" style="margin-block: 4rem;"><img src="images/blog_haircare.png" alt="Haircare"></div>
+                
+                <div class="post-content">
+                    <p>There is a specific kind of confidence that comes from walking out of a salon with a fresh blowout. The bounce, the shine, and that perfect, seemingly effortless curl are often hard to replicate in front of your own bathroom mirror.</p>
+                    <p>Our senior stylists have spent years perfecting the art of the curl. Today, we're pulling back the curtain on the techniques we use to create those long-lasting, voluminous waves that our clients love.</p>
+                    
+                    <h2>Preparation is Everything</h2>
+                    <p>You cannot build a beautiful house on a weak foundation, and the same applies to your hair. Starting with a high-quality, heat-protectant primer is non-negotiable. This not only shields your strands from damage but also provides the "grip" necessary for the curls to hold their shape throughout the day.</p>
+                    
+                    <blockquote>"The secret to a great curl isn't the iron; it's how you prepare the hair before the heat ever touches it."</blockquote>
+
+                    <h2>The "Cool Down" Rule</h2>
+                    <p>If you brush out your curls while they are still warm, they will drop almost immediately. Once you release a curl from the iron, pin it in place with a small clip or simply let it sit untouched until it is completely cool to the touch.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===================== ARTICLE: WELLNESS ===================== -->
+        <article id="wellness" class="blog-post-wrapper">
+            <div class="container post-layout-centered">
+                <div class="post-meta-main" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <span class="post-category">Wellness Rituals</span>
+                </div>
+                <h2>Mindful Mornings: Why 15 Minutes of Yoga Changes Everything</h2>
+                <div class="post-meta-main" style="justify-content: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--nav-border); padding-bottom: 2rem;">
+                    <span>By Sarah Chen</span><span>May 08, 2024</span><span>5 Min Read</span>
+                </div>
+                
+                <div class="post-featured-img" style="margin-block: 4rem;"><img src="images/blog_wellness.png" alt="Wellness"></div>
+                
+                <div class="post-content">
+                    <p>The first few moments after waking are the most influential of your entire day. How we choose to spend those minutes—whether scrolling through news alerts or breathing deeply into a stretch—sets a frequency that resonates through every conversation.</p>
+                    <p>At Glow Salon's Wellness Studio, we advocate for the "Minimum Viable Ritual." You don't need a 90-minute hot yoga class to experience the benefits of mindful movement. Just fifteen minutes can recalibrate your system.</p>
+                    
+                    <h2>The Science of Morning Movement</h2>
+                    <p>When we stretch in the morning, we are doing more than just waking up our muscles. We are signaling to our autonomic nervous system that we are safe, centered, and ready. This reduces cortisol levels and improves focus for the rest of the day.</p>
+                    
+                    <blockquote>"Yoga is not about touching your toes; it is about what you learn on the way down."</blockquote>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===================== ARTICLE: BRIDAL ===================== -->
+        <article id="bridal" class="blog-post-wrapper">
+            <div class="container post-layout-centered">
+                <div class="post-meta-main" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <span class="post-category">Bridal Beauty</span>
+                </div>
+                <h2>The 6-Month Bridal Beauty Countdown: Your Journey to Glow</h2>
+                <div class="post-meta-main" style="justify-content: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--nav-border); padding-bottom: 2rem;">
+                    <span>By Sofia Rossi</span><span>May 02, 2024</span><span>10 Min Read</span>
+                </div>
+                
+                <div class="post-featured-img" style="margin-block: 4rem;"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1100&q=80" alt="Bridal"></div>
+                
+                <div class="post-content">
+                    <p>Your wedding day is a celebration of love, but it's also a marathon of preparation. For the bride-to-be, the journey to that perfect "bridal glow" starts long before the morning of the ceremony.</p>
+                    <p>Our bridal specialists recommend a phased approach. From stabilizing your skin's microbiome to finding the perfect hair color intensity, every month counts in creating a timeless look.</p>
+                    
+                    <h2>Phase 1: The Foundation (Month 6-4)</h2>
+                    <p>This is the time for deep repair. Focus on professional facials that target your specific skin concerns—be it hydration, anti-aging, or texture. It's also the ideal window to start a hair health regimen, including regular scalp treatments and trims.</p>
+                    
+                    <blockquote>"A bride's most beautiful accessory is her confidence, and that starts with healthy skin and hair."</blockquote>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===================== ARTICLE: SUMMER GLOW ===================== -->
+        <article id="summer-glow" class="blog-post-wrapper">
+            <div class="container post-layout-centered">
+                <div class="post-meta-main" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <span class="post-category">Skincare</span>
+                </div>
+                <h2>Summer Glow: Protecting Your Skin from Urban Pollutants</h2>
+                <div class="post-meta-main" style="justify-content: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--nav-border); padding-bottom: 2rem;">
+                    <span>By Elena Vance</span><span>April 28, 2024</span><span>7 Min Read</span>
+                </div>
+                
+                <div class="post-featured-img" style="margin-block: 4rem;"><img src="/images/facial.avif" alt="Summer Glow"></div>
+                
+                <div class="post-content">
+                    <p>As the temperature rises and the city air fills with the dust and heat of summer, your skin faces a unique set of challenges. It's not just the UV rays we need to worry about; urban pollutants can accelerate aging and cause inflammation if not properly managed.</p>
+                    <p>At Glow Salon, we recommend a defensive strategy that combines high-performance SPF with antioxidant-rich serums that act as a shield for your complexion.</p>
+                    
+                    <h2>The Double-Cleanse Ritual</h2>
+                    <p>In the summer, a single cleanse is often not enough to remove the combination of sweat, SPF, and microscopic pollution particles. Start with an oil-based cleanser to break down the surface debris, followed by a gentle, hydrating foam to deep-clean the pores without stripping your moisture barrier.</p>
+                    
+                    <blockquote>"Consistency in your summer routine is the difference between a temporary glow and long-term skin health."</blockquote>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===================== ARTICLE: NAIL ART ===================== -->
+        <article id="nail-art" class="blog-post-wrapper">
+            <div class="container post-layout-centered">
+                <div class="post-meta-main" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <span class="post-category">Beauty Trends</span>
+                </div>
+                <h2>Sustainable Chic: The Rise of Non-Toxic Nail Art</h2>
+                <div class="post-meta-main" style="justify-content: flex-start; gap: 1.5rem; border-bottom: 1px solid var(--nav-border); padding-bottom: 2rem;">
+                    <span>By Chloe Bennett</span><span>April 22, 2024</span><span>12 Min Read</span>
+                </div>
+                
+                <div class="post-featured-img" style="margin-block: 4rem;"><img src="/images/nailart.jpg" alt="Nail Art"></div>
+                
+                <div class="post-content">
+                    <p>For decades, the nail industry has been dominated by harsh chemicals, strong odors, and a "beauty at any cost" mentality. However, the modern consumer is shifting toward "sustainable chic"—a movement that proves you don't have to compromise on health, ethics, or environmental responsibility to achieve a stunning, high-fashion manicure.</p>
+                    
+                    <p>At Glow Salon, we have redefined the manicure experience by transitioning exclusively to a curated selection of non-toxic, 10-free polishes. These advanced formulas offer the same vibrancy and longevity as traditional lacquers but without the harmful formaldehydes, resins, and parabens that often lead to nail thinning and sensitivity.</p>
+                    
+                    <h2>The Minimalist Aesthetic: Less is Truly More</h2>
+                    <p>One of the defining characteristics of sustainable nail art is the shift away from over-complicated extensions toward a sophisticated, minimalist aesthetic. This season, we are seeing a massive surge in "negative space" designs—where the natural nail becomes part of the art—and delicate micro-French tips that elongate the fingers without the need for aggressive filing.</p>
+                    
+                    <blockquote>"True luxury is found in the transparency of the products we use. It is the peace of mind that comes from knowing your beauty routine is as kind to your body as it is to the planet."</blockquote>
+
+                    <h2>The Science of 10-Free Formulas</h2>
+                    <p>Many clients ask if non-toxic polish can truly hold up against the rigors of daily life. The answer is a resounding yes. Modern distillation techniques have allowed us to extract pigments and resins from plant-based sources that provide a high-shine finish and exceptional chip resistance. When paired with our oxygenated base coats, your nails can actually "breathe," maintaining their natural moisture balance even under several layers of color.</p>
+
+                    <h2>Pro-Tips for Manicure Longevity</h2>
+                    <p>To keep your sustainable manicure looking fresh for up to two weeks, we recommend a simple but essential home ritual:</p>
+                    <ul>
+                        <li><strong>Hydrate Daily:</strong> Apply a drop of vitamin-E infused cuticle oil every evening to keep the surrounding skin supple and prevent the polish from lifting.</li>
+                        <li><strong>Seal the Edge:</strong> When applying your own top coat at home, always "swipe" the very edge of the nail to seal the color and prevent water penetration.</li>
+                        <li><strong>Gloves are Essential:</strong> Protect your investment by wearing gloves during household tasks; prolonged water exposure is the primary enemy of any manicure.</li>
+                    </ul>
+
+                    <h2>The Future of Nail Wellness</h2>
+                    <p>As we look forward, the future of nail care is undeniably focused on wellness. We are moving toward a world where the manicure is not just a cosmetic update but a therapeutic session. From infrared hand massages to collagen-infused masks, the focus is on restoring the hands to their most youthful, healthy state.</p>
+                </div>
+            </div>
+        </article>
+
+
+
+        
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/loadComponents.js"></script>
+    <script>
+        function showPost() {
+            const hash = window.location.hash || '#skincare';
+            const targetId = hash.replace('#', '');
+            const sections = document.querySelectorAll('.blog-post-wrapper');
+            let found = false;
+
+            sections.forEach(s => {
+                if (s.id === targetId) {
+                    s.classList.add('active');
+                    found = true;
+                    // Reset scroll to top of the new content
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+
+            if (!found && sections.length > 0) {
+                sections[0].classList.add('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showPost();
+        });
+
+        window.addEventListener('hashchange', showPost);
+    </script>
+</body>
+</html>

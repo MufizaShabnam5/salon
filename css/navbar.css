@@ -1,0 +1,399 @@
+/* 
+ * ==========================================
+ * LUXE ELEGANCE NAVIGATION COMPONENT
+ * ==========================================
+ */
+
+/* CSS Variables for Light & Dark Themes */
+:root {
+    /* Light Mode Colors (Luxe Elegance) */
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-text: #1A1A1A;
+    --nav-accent-primary: #C4A47C;   /* Champagne Gold */
+    --nav-accent-hover: #B09068;     /* Darker Gold */
+    --nav-accent-secondary: #E8D5D1; /* Soft Rose */
+    --nav-dropdown-bg: #FFFFFF;
+    --nav-dropdown-shadow: rgba(0, 0, 0, 0.08);
+    --nav-border: rgba(0, 0, 0, 0.05);
+    --nav-font-logo: 'Cormorant Garamond', serif;
+    --nav-font-ui: 'Inter', sans-serif;
+}
+
+[data-theme='dark'] {
+    /* Dark Mode Colors (Luxe Elegance) */
+    --nav-bg: rgba(18, 18, 18, 0.95);
+    --nav-text: #F2F2F2;
+    --nav-accent-primary: #D4B68D;   /* Luminous Gold */
+    --nav-accent-hover: #E0C299;     /* Lighter Gold */
+    --nav-accent-secondary: #A68A85; /* Muted Mauve */
+    --nav-dropdown-bg: #1E1E1E;
+    --nav-dropdown-shadow: rgba(0, 0, 0, 0.5);
+    --nav-border: rgba(255, 255, 255, 0.05);
+}
+
+/* Basic Resets to ensure the component behaves independently */
+.luxe-header * {
+    box-sizing: border-box;
+}
+
+/* 
+ * 1. Header Wrapper & Sticky Positioning 
+ * Ensuring it doesn't break content below by keeping it visually separate
+ */
+.luxe-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--nav-border);
+    transition: background 0.4s ease, border-color 0.4s ease;
+    font-family: var(--nav-font-ui);
+    color: var(--nav-text);
+}
+
+/* 
+ * 2. Container & Breakpoints 
+ * Mobile: < 640px 
+ * Tablet: 640px - 1024px 
+ * Desktop: 1024px - 1280px 
+ * Large: > 1280px 
+ */
+.luxe-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 80px; /* Fixed height ensures layout stability */
+    max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .luxe-nav-container { max-width: 1024px; }
+}
+@media (min-width: 1280px) {
+    .luxe-nav-container { max-width: 1280px; }
+}
+
+/* 3. Logo */
+.luxe-logo {
+    font-family: var(--nav-font-logo);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--nav-text);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+.luxe-logo span {
+    color: var(--nav-accent-primary);
+    font-style: italic;
+}
+
+/* 4. Desktop Navigation Links */
+.luxe-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.luxe-nav-link {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+}
+
+/* Elegant Hover Effect */
+.luxe-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--nav-accent-primary);
+    transition: width 0.3s ease;
+}
+.luxe-nav-link:hover {
+    color: var(--nav-accent-primary);
+}
+.luxe-nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Styling */
+.luxe-dropdown {
+    position: relative;
+}
+.luxe-dropdown-icon {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+.luxe-dropdown:hover .luxe-dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.luxe-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0; /* Changed dynamically by RTL */
+    background: var(--nav-dropdown-bg);
+    min-width: 220px;
+    box-shadow: 0 10px 40px var(--nav-dropdown-shadow);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--nav-border);
+    margin-top: 1rem;
+}
+
+/* The invisible bridge to prevent hover loss */
+.luxe-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+}
+
+.luxe-dropdown:hover .luxe-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.luxe-dropdown-content a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+.luxe-dropdown-content a:hover {
+    background: var(--nav-border);
+    color: var(--nav-accent-primary);
+    padding-left: 1.8rem; /* Subtle indent effect */
+}
+[dir="rtl"] .luxe-dropdown-content a:hover {
+    padding-left: 1.5rem;
+    padding-right: 1.8rem;
+}
+
+/* RTL specific layout shifts */
+[dir="rtl"] .luxe-dropdown-content {
+    left: auto;
+    right: 0;
+}
+
+/* 5. Actions (Theme, LTR/RTL, Login) */
+.luxe-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Buttons Base */
+.luxe-btn-icon, .luxe-btn-text, .luxe-btn-primary {
+    cursor: pointer;
+    font-family: var(--nav-font-ui);
+    transition: all 0.3s ease;
+}
+
+.luxe-btn-icon {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--nav-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.luxe-btn-icon:hover {
+    background: var(--nav-border);
+    color: var(--nav-accent-primary);
+}
+.luxe-btn-icon svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* Hide specific icon based on theme */
+[data-theme='light'] .icon-sun { display: none; }
+[data-theme='dark'] .icon-moon { display: none; }
+
+.luxe-btn-text {
+    background: transparent;
+    border: 1px solid var(--nav-border);
+    color: var(--nav-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.luxe-btn-text:hover {
+    border-color: var(--nav-accent-primary);
+    color: var(--nav-accent-primary);
+}
+
+.luxe-btn-primary {
+    background: var(--nav-accent-primary);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0.6rem 1.8rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+}
+[data-theme='dark'] .luxe-btn-primary {
+    color: #1A1A1A; /* Better contrast on gold in dark mode */
+}
+.luxe-btn-primary:hover {
+    background: var(--nav-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(196, 164, 124, 0.3);
+    color:black;
+}
+
+/* 6. Hamburger Menu (Mobile & Tablet < 1024px) */
+.luxe-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001; /* Above mobile menu overlay */
+}
+.luxe-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--nav-text);
+    transition: all 0.3s ease;
+}
+
+/* 7. Mobile Menu Overlay */
+.luxe-mobile-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: var(--nav-bg);
+    padding: 2rem;
+    transform: translateX(-100%); /* Default LTR hide */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 999;
+}
+[dir="rtl"] .luxe-mobile-menu {
+    transform: translateX(100%); /* Default RTL hide */
+}
+.luxe-mobile-menu.active {
+    transform: translateX(0) !important;
+}
+
+.luxe-mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.luxe-mobile-menu li {
+    border-bottom: 1px solid var(--nav-border);
+}
+.luxe-mobile-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.luxe-mobile-dropdown {
+    display: none;
+    background: rgba(0,0,0,0.02);
+    padding: 0.5rem 1rem;
+}
+[data-theme='dark'] .luxe-mobile-dropdown { background: rgba(255,255,255,0.02); }
+.luxe-mobile-dropdown a {
+    display: block;
+    padding: 0.8rem 0;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+.luxe-mobile-menu .luxe-btn-primary {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Media Queries to show/hide Desktop vs Mobile navs */
+@media (max-width: 1023px) {
+    .luxe-nav-links { display: none; }
+    .luxe-hamburger { display: flex; }
+    .luxe-nav-actions .luxe-btn-primary { display: none; } /* Move login to mobile menu */
+}
+
+/* Hamburger Active Animations */
+.luxe-hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.luxe-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.luxe-hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* 
+ * DUMMY CONTENT STYLES (For previewing only, not part of navbar) 
+ */
+body {
+    margin: 0;
+    background: var(--nav-bg);
+    color: var(--nav-text);
+    transition: background 0.4s ease, color 0.4s ease;
+}
+.preview-content {
+    padding: 4rem 2rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    min-height: 150vh; /* to force scrolling to show sticky header */
+    font-family: var(--nav-font-ui);
+}
+.preview-content h1 {
+    font-family: var(--nav-font-logo);
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.preview-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.8;
+}

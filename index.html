@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Salon | Premium Spa & Beauty</title>
+    <meta name="description" content="Glow Salon offers premium spa treatments, beauty services, and wellness experiences. Book your luxurious appointment today.">
+
+    <!-- Favicon -->
+    <!--<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4A47C' stroke-width='1.5'><path d='M12 22c-4-4-6-8-6-12 0-3.5 2-6 6-8 4 2 6 4.5 6 8 0 4-2 8-6 12z'/></svg>">-->
+<link rel="icon" type="image/png" href="../Images/makeup (2).png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body data-theme="light">
+
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="section-label">Welcome to Glow Salon</span>
+                <h1>Where Beauty Meets<br><em>Pure Serenity</em></h1>
+                <p>Indulge in world-class spa treatments, expert beauty services, and a sanctuary designed for your total renewal.</p>
+                <div class="btn-group" style="justify-content:center; margin-top:2.5rem;">
+                    <a href="#booking" class="btn-primary">Book an Appointment</a>
+                    <a href="#services" class="btn-secondary">Explore Services</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- ===================== STATS ===================== -->
+        <section class="stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item reveal"><span class="num">12+</span><span class="label">Years of Excellence</span></div>
+                    <div class="stat-item reveal reveal-delay-1"><span class="num">8K+</span><span class="label">Happy Clients</span></div>
+                    <div class="stat-item reveal reveal-delay-2"><span class="num">40+</span><span class="label">Expert Therapists</span></div>
+                    <div class="stat-item reveal reveal-delay-3"><span class="num">25+</span><span class="label">Luxury Treatments</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SERVICES (Image Cards) ===================== -->
+        <section class="services-section section-padding" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-label">What We Offer</span>
+                    <h2>Our Signature Services</h2>
+                    <div class="divider"></div>
+                    <p style="max-width:580px; margin-inline:auto;">Every treatment is thoughtfully crafted for both salon and spa — from advanced skincare to deeply relaxing body rituals.</p>
+                </div>
+
+                <div class="services-image-grid">
+
+                    <!-- Spa: Hot Stone Massage -->
+                    <a href="service-details.html#spa" class="service-img-card reveal" style="text-decoration:none;display:block;">
+                        <img src="../images/hot stone.avif" alt="Hot Stone Massage" loading="lazy">
+                        <div class="sic-gradient"></div>
+                        <div class="sic-overlay"></div>
+                        <div class="sic-content">
+                            <span class="sic-badge">Spa</span>
+                            <h3>Hot Stone Massage</h3>
+                            <p>Melt tension away with heated basalt stones and warm oils for deep muscle restoration.</p>
+                            <span class="sic-tag">View Details <svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        </div>
+                    </a>
+
+                    <!-- Salon: Luxury Facial -->
+                    <a href="service-details.html#skin" class="service-img-card reveal reveal-delay-1" style="text-decoration:none;display:block;">
+                        <img src="../images/facial.avif" alt="Luxury Facial" loading="lazy">
+                        <div class="sic-gradient"></div>
+                        <div class="sic-overlay"></div>
+                        <div class="sic-content">
+                            <span class="sic-badge">Salon</span>
+                            <h3>Glow Facial</h3>
+                            <p>Advanced facials tailored to your skin type — hydration, anti-aging, and radiance boosting.</p>
+                            <span class="sic-tag">View Details <svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        </div>
+                    </a>
+
+                    <!-- Salon: Hair Styling -->
+                    <a href="service-details.html#hair" class="service-img-card reveal reveal-delay-2" style="text-decoration:none;display:block;">
+                        <img src="../images/hair style.jpg" alt="Hair Styling" loading="lazy">
+                        <div class="sic-gradient"></div>
+                        <div class="sic-overlay"></div>
+                        <div class="sic-content">
+                            <span class="sic-badge">Salon</span>
+                            <h3>Hair Styling</h3>
+                            <p>Expert cuts, colouring, keratin, and blowouts by our award-winning stylists.</p>
+                            <span class="sic-tag">View Details <svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        </div>
+                    </a>
+
+                    <!-- Salon: Bridal Makeup -->
+                    <a href="service-details.html#bridal" class="service-img-card reveal" style="text-decoration:none;display:block;">
+                        <img src="../images/bride.jpg" alt="Bridal Makeup" loading="lazy">
+                        <div class="sic-gradient"></div>
+                        <div class="sic-overlay"></div>
+                        <div class="sic-content">
+                            <span class="sic-badge">Salon</span>
+                            <h3>Bridal Beauty</h3>
+                            <p>Bespoke bridal packages — makeup, hair, and skincare prep for your perfect day.</p>
+                            <span class="sic-tag">View Details <svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        </div>
+                    </a>
+
+                    <!-- Spa: Aromatherapy -->
+                    <a href="service-details.html#spa" class="service-img-card reveal reveal-delay-1" style="text-decoration:none;display:block;">
+                        <img src="../images/aroma therapy.avif" alt="Aromatherapy" loading="lazy">
+                        <div class="sic-gradient"></div>
+                        <div class="sic-overlay"></div>
+                        <div class="sic-content">
+                            <span class="sic-badge">Spa</span>
+                            <h3>Aromatherapy</h3>
+                            <p>Essential oil rituals that calm the nervous system and restore inner balance.</p>
+                            <span class="sic-tag">View Details <svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        </div>
+                    </a>
+
+                    <!-- Spa: Body Ritual -->
+                    <a href="service-details.html#spa" class="service-img-card reveal reveal-delay-2" style="text-decoration:none;display:block;">
+                        <img src="../images/body.avif" alt="Body Ritual" loading="lazy">
+                        <div class="sic-gradient"></div>
+                        <div class="sic-overlay"></div>
+                        <div class="sic-content">
+                            <span class="sic-badge">Spa</span>
+                            <h3>Body Rituals</h3>
+                            <p>Full-body scrubs, wraps, and hydration therapies for silky, luminous skin.</p>
+                            <span class="sic-tag">View Details <svg viewBox="0 0 24 24" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="text-center" style="margin-top:3rem;">
+                    <a href="services.html" class="btn-secondary">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="about-image-wrap reveal-left">
+                        <img src="../images/cleansing.jpg" alt="Luxury spa treatment room" loading="lazy">
+                        <div class="about-badge">
+                            <span class="big">14</span>
+                            <span class="small">Years of Luxury</span>
+                        </div>
+                    </div>
+                    <div class="about-text reveal-right">
+                        <span class="section-label">Our Story</span>
+                        <h2>A Sanctuary Created Just for You</h2>
+                        <div class="divider left"></div>
+                        <p>Founded in 2010, Glow Salon was born from a single vision — to create a space where every guest feels celebrated, restored, and truly cared for.</p>
+                        <p>Our team of 40+ certified therapists and beauty experts are united by a passion for excellence and a commitment to using only the finest, ethically sourced products.</p>
+                        <ul class="about-list">
+                            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Certified luxury therapists & stylists</li>
+                            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Organic & cruelty-free products only</li>
+                            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Bespoke treatments tailored to you</li>
+                            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Award-winning salon & spa design</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="about.html" class="btn-primary">Discover Our Story</a>
+                            <a href="#booking" class="btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== HOW IT WORKS ===================== -->
+        <section class="process-section section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-label">Simple & Easy</span>
+                    <h2>How It Works</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step reveal">
+                        <div class="process-num">01</div>
+                        <h4>Choose a Service</h4>
+                        <p>Browse our full menu of spa and salon treatments and pick what speaks to you.</p>
+                    </div>
+                    <div class="process-step reveal reveal-delay-1">
+                        <div class="process-num">02</div>
+                        <h4>Book Online</h4>
+                        <p>Select your preferred date, time, and therapist in under a minute.</p>
+                    </div>
+                    <div class="process-step reveal reveal-delay-2">
+                        <div class="process-num">03</div>
+                        <h4>Arrive & Unwind</h4>
+                        <p>We handle everything from the moment you walk through our doors.</p>
+                    </div>
+                    <div class="process-step reveal reveal-delay-3">
+                        <div class="process-num">04</div>
+                        <h4>Leave Glowing</h4>
+                        <p>Walk out feeling renewed, radiant, and completely transformed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TREATMENTS GRID ===================== -->
+        <section class="treatments-section section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom:3rem;">
+                    <span class="section-label">Signature Experiences</span>
+                    <h2>Our Most Loved Treatments</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="treatments-grid">
+                    <a href="service-details.html#spa" class="treatment-card reveal" style="text-decoration:none;">
+                        <img src="../images/hot.avif" alt="Hot Stone Massage" loading="lazy">
+                        <div class="treatment-overlay">
+                            <h4>Hot Stone Massage</h4>
+                            <span>90 min · From Rs 4000/-</span>
+                            <span class="treatment-btn">View Services</span>
+                        </div>
+                    </a>
+                    <a href="service-details.html#skin" class="treatment-card reveal reveal-delay-1" style="text-decoration:none;">
+                        <img src="../images/microderma.webp" alt="Luxury Facial" loading="lazy">
+                        <div class="treatment-overlay">
+                            <h4>Glow Facial</h4>
+                            <span>60 min · From RS 195/-</span>
+                            <span class="treatment-btn">View Services</span>
+                        </div>
+                    </a>
+                    <a href="service-details.html#nails" class="treatment-card reveal reveal-delay-2" style="text-decoration:none;">
+                        <img src="/images/nailart.jpg" alt="Nail Art" loading="lazy">
+                        <div class="treatment-overlay">
+                            <h4>Luxury Nail Art</h4>
+                            <span>45 min · From RS 265/-</span>
+                            <span class="treatment-btn">View Services</span>
+                        </div>
+                    </a>
+                    <a href="service-details.html#wellness" class="treatment-card reveal reveal-delay-3" style="text-decoration:none;">
+                        <img src="../images/wellness.avif" alt="Wellness & Yoga" loading="lazy">
+                        <div class="treatment-overlay">
+                            <h4>Wellness & Yoga</h4>
+                            <span>75 min · From RS 1185/-</span>
+                            <span class="treatment-btn">View Services</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TESTIMONIALS ===================== -->
+        <section class="testimonials-section section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom:3.5rem;">
+                    <span class="section-label">What Clients Say</span>
+                    <h2>Voices of Serenity</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="grid-3 auto-center">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="testimonial-text">"The hot stone massage left me completely transformed. The attention to detail, the ambiance, the therapist's skill — absolutely world-class. I will never go anywhere else."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S</div>
+                            <div><div class="testimonial-name">Sophia M.</div><div class="testimonial-role">Regular Client · 4 years</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-1">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="testimonial-text">"My bridal package was a dream. The team made me feel like royalty. My skin glowed for weeks after the pre-wedding facial series. Truly irreplaceable!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">A</div>
+                            <div><div class="testimonial-name">Amara K.</div><div class="testimonial-role">Bridal Client</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-2">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="testimonial-text">"The Glow Facial is simply magic. After just two sessions my skin texture improved dramatically. Staff are warm, professional, and incredibly knowledgeable."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">R</div>
+                            <div><div class="testimonial-name">Rachel T.</div><div class="testimonial-role">Monthly Member</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TRUST BAR ===================== -->
+        <section class="trust-section">
+            <div class="container" style="overflow: hidden;">
+                <p class="trust-label">Trusted by Premium Brands</p>
+                <div class="trust-marquee">
+                    <div class="trust-track">
+                        <!-- Original Set -->
+                        <span class="trust-logo">La Mer</span>
+                        <span class="trust-logo">Chanel Beauty</span>
+                        <span class="trust-logo">Dior Spa</span>
+                        <span class="trust-logo">Kérastase</span>
+                        <span class="trust-logo">Caudalie</span>
+                        <span class="trust-logo">Sisley Paris</span>
+                        <!-- Duplicate Set for infinite scroll -->
+                        <span class="trust-logo">La Mer</span>
+                        <span class="trust-logo">Chanel Beauty</span>
+                        <span class="trust-logo">Dior Spa</span>
+                        <span class="trust-logo">Kérastase</span>
+                        <span class="trust-logo">Caudalie</span>
+                        <span class="trust-logo">Sisley Paris</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== BOOKING CTA ===================== -->
+        <section class="booking-section" id="booking">
+            <div class="container">
+                <div class="booking-inner">
+                    <div>
+                        <span class="section-label">Reserve Your Time</span>
+                        <h2>Ready to Glow?</h2>
+                        <p>Our therapists are ready to craft the perfect experience just for you. Book online in under a minute.</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="#" class="btn-primary">Book an Appointment</a>
+                        <a href="contact.html" class="btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="js/loadComponents.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hero ken-burns on load
+            const hero = document.querySelector('.hero');
+            if (hero) setTimeout(() => hero.classList.add('in-view'), 100);
+
+            // Scroll-reveal
+            const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+                });
+            }, { threshold: 0.10 });
+            revealEls.forEach(el => observer.observe(el));
+
+            // Animated counters in stats bar
+            const counters = document.querySelectorAll('.stat-item .num');
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting) return;
+                    const el = e.target;
+                    const target = parseInt(el.textContent);
+                    const suffix = el.textContent.replace(/[0-9]/g, '');
+                    let current = 0;
+                    const step = Math.ceil(target / 40);
+                    const timer = setInterval(() => {
+                        current = Math.min(current + step, target);
+                        el.textContent = current + suffix;
+                        if (current >= target) clearInterval(timer);
+                    }, 35);
+                    countObserver.unobserve(el);
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => countObserver.observe(c));
+        });
+    </script>
+</body>
+</html>
