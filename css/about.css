@@ -65,7 +65,7 @@
 .fluid-hero-bg {
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
+    background: url('../images/hot\ stone.avif') center/cover no-repeat;
     animation: kenBurns 20s ease-out forwards;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .fluid-split-panel:nth-child(2) .fluid-split-bg {
-    background-image: url('/images/about_treatment.png');
+    background-image: url('../images/about_treatment.png');
 }
 
 .fluid-split-overlay {
