@@ -5,8 +5,8 @@
 /* ---- HERO SECTION ---- */
 .svc-hero {
     position: relative;
-    height: 70vh;
-    min-height: 500px;
+    height: 85vh;
+    min-height: 650px;
     background-image: url('../images/blog_wellness.png');
     background-size: cover;
     background-position: center;
