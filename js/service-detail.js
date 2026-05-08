@@ -41,7 +41,7 @@ const serviceData = {
             description: "Transform your look with precision cuts, bespoke styling, advanced colouring techniques, and deeply nourishing hair treatments from our master stylists.",
             benefits: [
                 "Expert color-matching and balayage",
-                "Kérastase nourishing treatments",
+                "KÃƒÆ’Ã‚Â©rastase nourishing treatments",
                 "Precision styling for your face shape",
                 "Damage-free coloring techniques"
             ],
@@ -194,20 +194,18 @@ const serviceData = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Get Service ID from URL
+
     const urlParams = new URLSearchParams(window.location.search);
     const serviceId = urlParams.get('id') || 'bridal'; // Default to bridal if none provided
     
     const data = serviceData[serviceId];
     if (!data) return; // Fail gracefully if invalid ID
 
-    // 2. Populate Hero
     const heroSection = document.getElementById('sd-hero');
     heroSection.style.backgroundImage = `url('${data.hero.image}')`;
     document.getElementById('sd-hero-title').textContent = data.hero.title;
     document.getElementById('sd-hero-tagline').textContent = data.hero.tagline;
 
-    // 3. Populate Overview
     document.getElementById('sd-overview-desc').textContent = data.overview.description;
     document.getElementById('sd-overview-why').textContent = data.overview.whyChoose;
     
@@ -219,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
         benefitsList.appendChild(li);
     });
 
-    // 4. Populate Process (Timeline)
     const processContainer = document.getElementById('sd-process');
     processContainer.innerHTML = '';
     data.process.forEach((step, index) => {
@@ -236,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
         processContainer.insertAdjacentHTML('beforeend', stepHTML);
     });
 
-    // 5. Populate Gallery
     const galleryContainer = document.getElementById('sd-gallery');
     galleryContainer.innerHTML = '';
     data.gallery.forEach((imgSrc, index) => {
@@ -248,7 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryContainer.insertAdjacentHTML('beforeend', galHTML);
     });
 
-    // 6. Populate Packages
     const packagesContainer = document.getElementById('sd-packages');
     packagesContainer.innerHTML = '';
     data.packages.forEach((pkg, index) => {
@@ -268,7 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
         packagesContainer.insertAdjacentHTML('beforeend', pkgHTML);
     });
 
-    // Initialize Scroll Reveals for dynamically added elements
     setTimeout(() => {
         const revealEls = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
@@ -282,3 +276,5 @@ document.addEventListener('DOMContentLoaded', () => {
         revealEls.forEach(el => observer.observe(el));
     }, 100);
 });
+
+

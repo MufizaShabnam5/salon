@@ -1,6 +1,4 @@
-/* ===========================================
-   GLOW SALON — BLOG STYLES (blog.css)
-   =========================================== */
+
 
 body.blog-page {
     background-image: url('../images/blog_bg.png');
@@ -11,7 +9,7 @@ body.blog-page {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Fix for dark mode white line issue */
+
 [data-theme='dark'].blog-page,
 [data-theme='dark'] .blog-page,
 [data-theme='dark'] html {
@@ -24,7 +22,7 @@ body.blog-page[data-theme='dark'] {
     color: #F2F2F2 !important;
 }
 
-/* Ensure no white background bleeds through in dark mode */
+
 body.blog-page[data-theme='dark'] main,
 body.blog-page[data-theme='dark'] section:not(.blog-hero) {
     background-color: #0F0F0F !important;
@@ -38,7 +36,7 @@ body.blog-page[data-theme='dark'] .blog-hero {
     box-shadow: none !important;
 }
 
-/* ---- HERO SECTION ---- */
+
 .blog-hero {
     position: relative;
     padding-block: 12rem 8rem;
@@ -89,7 +87,7 @@ body.blog-page[data-theme='dark'] .blog-hero::before {
     font-size: 1.1rem;
 }
 
-/* ---- FEATURED POST ---- */
+
 .featured-section {
     padding-block: 5rem;
 }
@@ -167,7 +165,7 @@ body.blog-page[data-theme='dark'] .featured-card:hover h2 {
     line-height: 1.8;
 }
 
-/* ---- BLOG GRID ---- */
+
 .blog-grid-section {
     padding-bottom: 8rem;
 }
@@ -296,7 +294,7 @@ body.blog-page[data-theme='dark'] .featured-content p {
     transform: translateX(4px);
 }
 
-/* ---- BLOG DETAILS PAGE ---- */
+
 .post-header {
     padding-block: 8rem 4rem;
     text-align: center;
@@ -368,7 +366,7 @@ body.blog-page[data-theme='dark'] .featured-content p {
     color: var(--nav-text);
 }
 
-/* ---- SIDEBAR ---- */
+
 .sidebar-widget {
     margin-bottom: 4rem;
 }
@@ -450,14 +448,14 @@ body.blog-page[data-theme='dark'] .featured-content p {
     font-size: 0.85rem;
 }
 
-/* ---- RELATED POSTS SECTION ---- */
+
 .related-posts-section {
     padding-block: 6rem;
     background: var(--nav-dropdown-bg);
     border-top: 1px solid var(--nav-border);
 }
 
-/* ---- RESPONSIVENESS ---- */
+
 @media (max-width: 1199px) {
     .post-layout { grid-template-columns: 1fr; gap: 4rem; }
     .post-featured-img { height: 450px; }
@@ -481,3 +479,4 @@ body.blog-page[data-theme='dark'] .featured-content p {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+

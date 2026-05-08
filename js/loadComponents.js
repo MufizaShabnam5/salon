@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Function to load external HTML components
+
     const loadComponent = async (url, placeholderId) => {
         try {
             const response = await fetch(url);
@@ -15,18 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Load Header and Footer concurrently
     Promise.all([
         loadComponent('navigation/navbar.html', 'header-placeholder'),
         loadComponent('navigation/footer.html', 'footer-placeholder')
     ]).then(() => {
-        // Initialize interactive logic AFTER the components are loaded into the DOM
+
         initializeNavbarLogic();
         initializeFooterLogic();
     });
 
     function initializeNavbarLogic() {
-        // Theme Toggle
+
         const themeBtn = document.getElementById('themeToggleBtn');
         const body = document.body;
         if (themeBtn) {
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // LTR / RTL Toggle
         const rtlBtn = document.getElementById('rtlToggleBtn');
         const html = document.documentElement;
         if (rtlBtn) {
@@ -47,20 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Hamburger Menu
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         if (hamburgerBtn && mobileMenu) {
             hamburgerBtn.addEventListener('click', () => {
                 hamburgerBtn.classList.toggle('active');
                 mobileMenu.classList.toggle('active');
-                
-                // Prevent scrolling on body when menu is open
+
                 document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
             });
         }
 
-        // Mobile Dropdown
         const mobileHomeToggle = document.getElementById('mobileHomeToggle');
         const mobileHomeDropdown = document.getElementById('mobileHomeDropdown');
         if (mobileHomeToggle && mobileHomeDropdown) {
@@ -68,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const isExpanded = mobileHomeDropdown.style.display === 'block';
                 mobileHomeDropdown.style.display = isExpanded ? 'none' : 'block';
-                // Rotate icon
+
                 const icon = mobileHomeToggle.querySelector('.luxe-dropdown-icon');
                 if (icon) {
                     icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(180deg)';
@@ -76,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Highlight Active Link
         const currentPath = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.luxe-nav-link, .luxe-dropdown-content a, .luxe-mobile-link, .luxe-mobile-dropdown a');
         
@@ -84,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const href = link.getAttribute('href');
             if (href === currentPath) {
                 link.classList.add('active');
-                
-                // If it's in a dropdown, highlight the parent too
+
                 const dropdown = link.closest('.luxe-dropdown');
                 if (dropdown) {
                     const parentLink = dropdown.querySelector('.luxe-nav-link');
@@ -96,10 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function initializeFooterLogic() {
-        // Auto-update copyright year
+
         const yearSpan = document.getElementById('currentYear');
         if (yearSpan) {
             yearSpan.textContent = new Date().getFullYear();
         }
     }
 });
+
+

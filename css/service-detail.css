@@ -1,8 +1,6 @@
-/* ============================================
-   GLOW SALON — SERVICE DETAIL PAGE CSS
-   ============================================ */
 
-/* ---- HERO SECTION ---- */
+
+
 .sd-hero {
     position: relative;
     height: 60vh;
@@ -23,7 +21,7 @@
 .sd-hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(21, 19, 18, 0.65); /* Darker overlay for text readability */
+    background: rgba(21, 19, 18, 0.65); 
     z-index: 1;
 }
 
@@ -51,7 +49,7 @@
     text-transform: uppercase;
 }
 
-/* ---- OVERVIEW SECTION ---- */
+
 .sd-overview {
     padding: 8rem 0;
     background-color: var(--color-bg);
@@ -110,7 +108,7 @@
     margin-top: 3px;
 }
 
-/* ---- PROCESS TIMELINE ---- */
+
 .sd-process-section {
     padding: 8rem 0;
     background-color: var(--color-bg-alt);
@@ -187,7 +185,7 @@
     margin: 0;
 }
 
-/* ---- GALLERY ---- */
+
 .sd-gallery-section {
     padding: 8rem 0;
     background-color: var(--color-bg);
@@ -217,7 +215,7 @@
     transform: scale(1.05);
 }
 
-/* ---- PACKAGES / PRICING ---- */
+
 .sd-packages-section {
     padding: 8rem 0;
     background-color: var(--color-bg-alt);
@@ -228,7 +226,7 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     margin-top: 4rem;
-    align-items: center; /* Important for the featured card popping up */
+    align-items: center; 
 }
 
 .pkg-card {
@@ -251,14 +249,14 @@
     transform: scale(1.05);
     box-shadow: var(--shadow-soft);
     z-index: 2;
-    background: #fff; /* Ensure it stands out in light mode */
+    background: #fff; 
 }
 
 .pkg-card.popular:hover {
     transform: scale(1.05) translateY(-10px);
 }
 
-/* Dark mode adjustment for popular card */
+
 [data-theme="dark"] .pkg-card.popular {
     background: #1A1716;
 }
@@ -318,7 +316,7 @@
     width: 100%;
 }
 
-/* ---- RESPONSIVE ---- */
+
 @media (max-width: 992px) {
     .sd-overview-grid {
         grid-template-columns: 1fr;
@@ -347,3 +345,4 @@
         padding: 2.5rem 1.5rem;
     }
 }
+

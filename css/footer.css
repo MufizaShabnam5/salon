@@ -1,11 +1,7 @@
-/* 
- * ==========================================
- * LUXE ELEGANCE FOOTER STYLES
- * ==========================================
- */
+
 
 .luxe-footer {
-    background-color: var(--nav-dropdown-bg); /* Inherits from navbar.css variables */
+    background-color: var(--nav-dropdown-bg); 
     border-top: 1px solid var(--nav-border);
     padding: 4rem 0 1rem;
     font-family: var(--nav-font-ui);
@@ -55,7 +51,7 @@
     transform: translateY(-3px);
 }
 [data-theme='dark'] .footer-socials a:hover {
-    color: #1A1A1A; /* Better contrast in dark mode on hover */
+    color: #1A1A1A; 
 }
 
 .footer-socials svg {
@@ -142,7 +138,7 @@
     color: var(--nav-accent-primary);
 }
 
-/* Responsive Footer Breakpoints */
+
 @media (max-width: 1023px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;

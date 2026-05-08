@@ -1,8 +1,6 @@
-/* ===========================================
-   GLOW SALON — CONTACT PAGE STYLES (contact.css)
-   =========================================== */
 
-/* ---- HERO SECTION ---- */
+
+
 .ct-hero {
     position: relative;
     min-height: 80vh;
@@ -61,7 +59,7 @@
     margin-inline: auto;
 }
 
-/* ---- INFO BAR ---- */
+
 .ct-info-bar {
     background: var(--nav-bg);
     padding-block: 6rem 4rem;
@@ -143,7 +141,7 @@
     border-color: var(--color-primary);
 }
 
-/* ---- MAIN GRID (FORM + MAP) ---- */
+
 .ct-main {
     background: var(--nav-dropdown-bg);
     padding-block: 6rem;
@@ -255,7 +253,7 @@
     height: 20px;
 }
 
-/* ---- RIGHT COLUMN (MAP + SOCIAL) ---- */
+
 .ct-map-wrap {
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -316,7 +314,7 @@
     stroke: #fff;
 }
 
-/* ---- CTA BAND ---- */
+
 .ct-cta {
     background: var(--color-primary);
     padding-block: 5rem;
@@ -349,7 +347,7 @@
     color: #1A1A1A;
 }
 
-/* ---- RESPONSIVENESS ---- */
+
 @media (max-width: 1199px) {
     .ct-info-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -364,7 +362,7 @@
     .ct-hero-content h1 { font-size: 3rem; }
 }
 
-/* ---- FLOATING CONTACT BUTTON ---- */
+
 .floating-wa {
     position: fixed;
     bottom: 2rem;
@@ -414,3 +412,4 @@
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+

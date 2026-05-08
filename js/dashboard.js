@@ -1,23 +1,17 @@
-/* ============================================
-   GLOW SALON — DASHBOARD LOGIC
-   ============================================ */
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Initialize Theme & RTL from localStorage
+
     const savedTheme = localStorage.getItem('glow_theme') || 'light';
     const savedDir = localStorage.getItem('glow_dir') || 'ltr';
     
     document.body.setAttribute('data-theme', savedTheme);
     document.documentElement.setAttribute('dir', savedDir);
 
-    // Initialize Chart.js with matching colors
     initCharts();
 
-    // Set page title based on active section
     updatePageTitle('overview');
 
-    // ScrollSpy to highlight sidebar links as user scrolls
     setupScrollSpy();
 });
 
@@ -43,9 +37,7 @@ function setupScrollSpy() {
     document.querySelectorAll('.content-section').forEach(sec => observer.observe(sec));
 }
 
-/**
- * Toggle Sidebar on Mobile
- */
+
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.querySelector('.sidebar-overlay');
@@ -58,19 +50,15 @@ function toggleSidebar() {
     }
 }
 
-/**
- * Smooth Scroll to Section
- */
+
 function switchSection(sectionId, event) {
     if (event) event.preventDefault();
 
-    // Scroll directly to target
     const targetEl = document.getElementById('section-' + sectionId);
     if (targetEl) {
         targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Close sidebar on mobile
     const sidebar = document.getElementById('sidebar');
     if (sidebar && sidebar.classList.contains('open')) {
         toggleSidebar();
@@ -95,22 +83,17 @@ function updatePageTitle(sectionId) {
     }
 }
 
-/**
- * Toggle Theme (Light/Dark)
- */
+
 function toggleDashTheme() {
     const body = document.body;
     const newTheme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('glow_theme', newTheme);
-    
-    // Update charts to reflect new theme colors
+
     initCharts();
 }
 
-/**
- * Toggle RTL/LTR
- */
+
 function toggleDashRTL() {
     const html = document.documentElement;
     const currentDir = html.getAttribute('dir');
@@ -119,9 +102,7 @@ function toggleDashRTL() {
     localStorage.setItem('glow_dir', newDir);
 }
 
-/**
- * Chart.js Initialization
- */
+
 let revenueChartInstance = null;
 let serviceChartInstance = null;
 let marketingChartInstance = null;
@@ -135,7 +116,6 @@ function initCharts() {
     Chart.defaults.color = textColor;
     Chart.defaults.font.family = "'Inter', sans-serif";
 
-    // 1. Revenue Chart (Line)
     const revCtx = document.getElementById('revenueChart');
     if (revCtx) {
         if (revenueChartInstance) revenueChartInstance.destroy();
@@ -189,7 +169,6 @@ function initCharts() {
         });
     }
 
-    // 2. Service Popularity (Doughnut)
     const srvCtx = document.getElementById('serviceChart');
     if (srvCtx) {
         if (serviceChartInstance) serviceChartInstance.destroy();
@@ -224,7 +203,6 @@ function initCharts() {
         });
     }
 
-    // 3. Marketing Campaign Chart (Bar)
     const mktCtx = document.getElementById('marketingChart');
     if (mktCtx) {
         if (marketingChartInstance) marketingChartInstance.destroy();
@@ -270,3 +248,5 @@ function initCharts() {
         });
     }
 }
+
+

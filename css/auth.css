@@ -1,16 +1,14 @@
-/* ============================================
-   GLOW SALON — PREMIUM AUTHENTICATION
-   ============================================ */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    --auth-bg: #F5EFEB; /* Soft beige */
+    --auth-bg: #F5EFEB; 
     --auth-card-bg: #FFFFFF;
     --auth-text-dark: #332F2A;
     --auth-text-muted: #8E867D;
     --auth-border: #E6DDD3;
-    --auth-primary: #B87333; /* Copper/Gold */
+    --auth-primary: #B87333; 
     --auth-primary-hover: #9E6129;
     --font-heading: 'Cormorant Garamond', serif;
     --font-ui: 'Inter', sans-serif;
@@ -32,10 +30,10 @@ body {
     background-color: var(--auth-bg);
     color: var(--auth-text-dark);
     height: 100vh;
-    overflow: hidden; /* Force strict no-scroll */
+    overflow: hidden; 
 }
 
-/* RTL Support */
+
 [dir="rtl"] { text-align: right; }
 [dir="rtl"] .input-wrap .input-icon { left: auto; right: 1rem; }
 [dir="rtl"] .form-input { padding-left: 1rem; padding-right: 2.8rem; }
@@ -45,7 +43,7 @@ body {
 [dir="rtl"] .divider:not(:empty)::before { margin-right: 0; margin-left: 1rem; }
 [dir="rtl"] .divider:not(:empty)::after { margin-left: 0; margin-right: 1rem; }
 
-/* ---- FULL SCREEN WRAPPER ---- */
+
 .auth-wrapper {
     position: relative;
     width: 100%;
@@ -56,7 +54,7 @@ body {
     padding-block: 0;
 }
 
-/* ---- TOP CONTROLS ---- */
+
 .auth-top-row {
     display: flex;
     justify-content: space-between;
@@ -94,18 +92,18 @@ body {
 }
 .ctrl-btn-text:hover { border-color: var(--auth-primary); color: var(--auth-primary); }
 
-/* ---- CARD ARCHITECTURE ---- */
+
 .auth-card {
     position: relative; z-index: 10;
     width: 100%; max-width: 580px;
     background: var(--auth-card-bg);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
-    padding: 1.5rem 3rem 1.5rem 3rem; /* Highly compressed */
+    padding: 1.5rem 3rem 1.5rem 3rem; 
     transition: all 0.3s ease;
 }
 
-/* Top Left Text */
+
 .auth-header-text {
     font-size: 0.85rem; color: var(--auth-text-muted);
     text-align: left;
@@ -116,7 +114,7 @@ body {
 }
 .auth-header-text a:hover { text-decoration: underline; }
 
-/* Branding */
+
 .auth-brand {
     display: flex; justify-content: center; align-items: center;
     text-decoration: none; margin-bottom: 0.75rem;
@@ -129,7 +127,7 @@ body {
     color: var(--auth-primary); font-style: italic;
 }
 
-/* Tracker (Step 1 of 3) */
+
 .step-tracker {
     display: flex; align-items: center; gap: 0.5rem;
     margin-bottom: 1rem;
@@ -138,7 +136,7 @@ body {
 .step-tracker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--auth-border); }
 .step-tracker .dot.active { width: 16px; border-radius: 3px; background: var(--auth-primary); }
 
-/* Typography */
+
 .pre-title {
     font-size: 0.65rem; font-weight: 600; letter-spacing: 2px;
     color: var(--auth-primary); text-transform: uppercase;
@@ -153,7 +151,7 @@ body {
     color: var(--auth-text-muted); font-size: 0.8rem; margin-bottom: 1.25rem;
 }
 
-/* ---- SOCIAL LOGINS ---- */
+
 .social-grid {
     display: flex; gap: 0.75rem; margin-bottom: 1rem;
 }
@@ -167,7 +165,7 @@ body {
 .btn-social:hover svg { fill: #fff !important; }
 .btn-social svg { width: 16px; height: 16px; transition: fill 0.3s; }
 
-/* Divider */
+
 .divider {
     display: flex; align-items: center; text-align: center; margin-block: 1rem;
     color: var(--auth-text-muted); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;
@@ -178,7 +176,7 @@ body {
 .divider:not(:empty)::before { margin-right: 1rem; }
 .divider:not(:empty)::after { margin-left: 1rem; }
 
-/* ---- FORMS ---- */
+
 .auth-form {
     display: flex; flex-direction: column; gap: 0.75rem;
 }
@@ -193,14 +191,14 @@ body {
     color: var(--auth-text-muted);
 }
 
-/* Pill Inputs */
+
 .input-wrap { position: relative; display: flex; align-items: center; width: 100%; }
 .input-icon {
     position: absolute; left: 1rem; width: 16px; height: 16px;
     color: var(--auth-text-muted); transition: color 0.3s;
     pointer-events: none;
 }
-/* Brand colors for icons */
+
 .icon-user { color: #6B4C9A; }
 .icon-mail { color: #D4BEE4; }
 .icon-phone { color: #D94680; }
@@ -211,7 +209,7 @@ body {
     border: 1px solid var(--auth-border);
     color: var(--auth-text-dark); font-family: var(--font-ui); font-size: 0.85rem;
     transition: all 0.3s ease;
-    border-radius: 8px; /* Compressed rounding */
+    border-radius: 8px; 
 }
 .form-input::placeholder { color: var(--auth-text-muted); opacity: 0.6; }
 .form-input:focus {
@@ -220,7 +218,7 @@ body {
 }
 .input-wrap:focus-within .input-icon { color: var(--auth-primary); }
 
-/* Password */
+
 .pwd-toggle {
     position: absolute; right: 0.8rem;
     background: none; border: none; cursor: pointer; color: var(--auth-text-muted);
@@ -230,7 +228,7 @@ body {
 .pwd-toggle svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; }
 .form-input[type="password"] { padding-right: 2.8rem; }
 
-/* Main Button */
+
 .btn-auth {
     width: 100%; padding: 0.8rem;
     background: var(--auth-primary); color: #fff;
@@ -241,7 +239,7 @@ body {
 }
 .btn-auth:hover { background: var(--auth-primary-hover); transform: translateY(-1px); }
 
-/* ---- RESPONSIVE & COMPACT HEIGHT ---- */
+
 @media (max-width: 768px), (max-height: 750px) {
     .auth-card {
         padding: 1.5rem 1.5rem;
@@ -280,3 +278,4 @@ body {
         justify-content: center;
     }
 }
+

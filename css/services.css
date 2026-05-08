@@ -1,8 +1,6 @@
-/* ============================================
-   GLOW SALON — SERVICES PAGE CSS
-   ============================================ */
 
-/* ---- HERO SECTION ---- */
+
+
 .svc-hero {
     position: relative;
     height: 85vh;
@@ -16,14 +14,14 @@
     justify-content: center;
     text-align: center;
     color: #fff;
-    margin-top: -80px; /* Offset for fixed navbar if applicable */
+    margin-top: -80px; 
     padding-top: 80px;
 }
 
 .svc-hero-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(21, 19, 18, 0.6); /* Dark editorial overlay */
+    background: rgba(21, 19, 18, 0.6); 
     z-index: 1;
 }
 
@@ -52,7 +50,7 @@
     color: gainsboro;
 }
 
-/* ---- SERVICES GRID ---- */
+
 .svc-grid-section {
     padding: 8rem 0;
     background-color: var(--color-bg);
@@ -76,7 +74,7 @@
 
 .svc-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(196, 164, 124, 0.1); /* Subtle primary tint shadow */
+    box-shadow: 0 15px 35px rgba(196, 164, 124, 0.1); 
     border-color: var(--color-primary);
 }
 
@@ -153,16 +151,16 @@
     color: #fff;
 }
 
-/* Ensure 5th card spans nicely if on grid */
+
 @media (min-width: 1060px) {
     .svc-grid .svc-card:nth-child(4) { grid-column: span 1; }
     .svc-grid .svc-card:nth-child(5) { grid-column: span 1; }
 }
 
-/* ---- FEATURED SERVICE ---- */
+
 .svc-featured {
     padding: 8rem 0;
-    background-color: var(--color-bg-alt); /* Slightly different bg for contrast */
+    background-color: var(--color-bg-alt); 
 }
 
 .svc-featured-wrapper {
@@ -183,7 +181,7 @@
     aspect-ratio: 4/5;
 }
 
-/* Decorative border for featured image */
+
 .svc-feat-img::after {
     content: '';
     position: absolute;
@@ -218,7 +216,7 @@
     flex-shrink: 0;
 }
 
-/* ---- TESTIMONIALS ---- */
+
 .svc-testimonials {
     padding: 8rem 0;
     background-color: var(--color-bg-alt);
@@ -306,7 +304,7 @@
     color: var(--color-text-muted);
 }
 
-/* ---- FAQ SECTION ---- */
+
 .svc-faq {
     padding: 8rem 0;
     background-color: var(--color-bg);
@@ -379,7 +377,7 @@
     background-color: var(--color-primary);
     color: #fff;
     border-color: var(--color-primary);
-    transform: rotate(135deg); /* Smoothly spins the + into an x */
+    transform: rotate(135deg); 
 }
 
 .faq-answer {
@@ -402,7 +400,7 @@
     padding-top: 1.5rem;
 }
 
-/* ---- SCROLL REVEAL ANIMATIONS ---- */
+
 .reveal, .reveal-left, .reveal-right {
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -419,7 +417,7 @@
 .reveal-delay-1 { transition-delay: 0.15s; }
 .reveal-delay-2 { transition-delay: 0.3s; }
 
-/* ---- CTA SECTION ---- */
+
 .svc-cta {
     padding: 6rem 0;
     background: linear-gradient(135deg, var(--color-bg-alt), var(--color-bg));
@@ -444,7 +442,7 @@
     margin-bottom: 2.5rem;
 }
 
-/* ---- RESPONSIVE ---- */
+
 @media (max-width: 992px) {
     .svc-featured-wrapper {
         flex-direction: column;
@@ -474,3 +472,4 @@
 @media (max-width: 480px) {
     .svc-grid-section { padding: 4rem 0; }
 }
+

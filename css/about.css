@@ -1,8 +1,6 @@
-/* ============================================
-   GLOW SALON — FLUID INTERACTIVE ABOUT PAGE
-   ============================================ */
 
-/* ---- GLOBAL REVEALS & ANIMATIONS ---- */
+
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -22,7 +20,7 @@
     transition-delay: 0.3s;
 }
 
-/* Text Mask Reveal (Line by line) */
+
 .mask-reveal {
     overflow: hidden;
     display: inline-block;
@@ -39,7 +37,7 @@
     transform: translateY(0);
 }
 
-/* Ken Burns Background */
+
 @keyframes kenBurns {
     0% {
         transform: scale(1);
@@ -50,7 +48,7 @@
     }
 }
 
-/* ---- FLUID HERO ---- */
+
 .fluid-hero {
     position: relative;
     height: 90svh;
@@ -104,7 +102,7 @@
     font-weight: 400;
 }
 
-/* ---- SPLIT INTERACTIVE SECTION ---- */
+
 .fluid-split-container {
     display: flex;
     height: 85svh;
@@ -173,7 +171,7 @@
     max-width: 500px;
 }
 
-/* Split Hover Logic */
+
 @media (hover: hover) and (min-width: 1024px) {
     .fluid-split-container:hover .fluid-split-panel {
         flex: 0.7;
@@ -215,7 +213,7 @@
     }
 }
 
-/* ---- ENDLESS MARQUEE ---- */
+
 .fluid-marquee {
     background: var(--color-primary);
     color: #0A0806;
@@ -252,7 +250,7 @@
     }
 }
 
-/* ---- DECADE OF EXCELLENCE (GRID) ---- */
+
 .fluid-timeline-sec {
     background: var(--nav-bg);
     padding-block: 8rem;
@@ -346,7 +344,7 @@
     }
 }
 
-/* ---- INTERACTIVE ARTISANS ---- */
+
 .fluid-artisans {
     background: var(--nav-dropdown-bg);
     padding-block: 8rem;
@@ -467,7 +465,7 @@
     }
 }
 
-/* ---- CTA ---- */
+
 .fluid-cta {
     background: #0A0806;
     padding-block: 8rem;

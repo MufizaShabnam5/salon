@@ -1,6 +1,4 @@
-/* ============================================
-   GLOW SALON — DASHBOARD CSS
-   ============================================ */
+
 
 :root {
     --dash-bg: #F5EFEB;
@@ -8,7 +6,7 @@
     --dash-text: #332F2A;
     --dash-text-muted: #8E867D;
     --dash-border: #E6DDD3;
-    --dash-primary: #C4A47C; /* Champagne Gold from global.css */
+    --dash-primary: #C4A47C; 
     --dash-primary-hover: #B09068;
     --dash-sidebar-bg: #FFFFFF;
     --dash-sidebar-w: 260px;
@@ -38,10 +36,10 @@ body {
     font-family: var(--font-ui);
     background-color: var(--dash-bg);
     color: var(--dash-text);
-    overflow: hidden; /* Prevent body scroll, layout handles it */
+    overflow: hidden; 
 }
 
-/* RTL Support */
+
 [dir="rtl"] { text-align: right; }
 [dir="rtl"] .dash-sidebar { border-right: none; border-left: 1px solid var(--dash-border); }
 [dir="rtl"] .nav-item svg { margin-right: 0; margin-left: 1rem; }
@@ -49,14 +47,14 @@ body {
 [dir="rtl"] .topbar-actions { border-right: none; border-left: 1px solid var(--dash-border); padding-left: 1.5rem; padding-right: 0; margin-left: 1.5rem; margin-right: 0; }
 [dir="rtl"] .profile-info { margin-left: 0; margin-right: 0.75rem; text-align: right; }
 
-/* ---- LAYOUT ---- */
+
 .dash-layout {
     display: flex;
     height: 100vh;
     width: 100%;
 }
 
-/* ---- SIDEBAR ---- */
+
 .dash-sidebar {
     width: var(--dash-sidebar-w);
     background: var(--dash-sidebar-bg);
@@ -92,7 +90,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    overflow-y: auto; /* Prevent unnecessary scrolling but allow if needed */
+    overflow-y: auto; 
 }
 
 .nav-item {
@@ -122,15 +120,15 @@ body {
 .logout-btn { color: #d9534f; }
 .logout-btn:hover { background: rgba(217, 83, 79, 0.1); color: #c9302c; }
 
-/* ---- MAIN CONTENT ---- */
+
 .dash-main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-width: 0; /* Important for flex child truncating */
+    min-width: 0; 
 }
 
-/* ---- TOPBAR ---- */
+
 .dash-topbar {
     height: var(--dash-topbar-h);
     background: var(--dash-card-bg);
@@ -176,12 +174,12 @@ body {
     border-right: 1px solid var(--dash-border);
 }
 
-/* Controls grouping to ensure they stay at the far right */
+
 .topbar-controls {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-left: auto; /* Push to far right */
+    margin-left: auto; 
 }
 
 .icon-btn {
@@ -232,7 +230,7 @@ body {
 .profile-name { font-size: 0.85rem; font-weight: 600; color: var(--dash-text); }
 .profile-role { font-size: 0.7rem; color: var(--dash-text-muted); }
 
-/* ---- CONTENT AREA ---- */
+
 .dash-content {
     flex: 1;
     padding: 2rem;
@@ -241,7 +239,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Section Styling for Scrolling Layout */
+
 .content-section {
     display: block;
     margin-bottom: 4rem;
@@ -251,14 +249,14 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Reusable Components */
+
 .dash-card {
     background: var(--dash-card-bg);
     border-radius: 12px;
     box-shadow: var(--shadow-soft);
     padding: 1.5rem;
     border: 1px solid var(--dash-border);
-    min-width: 0; /* Prevents overflow blowouts in grids/flex */
+    min-width: 0; 
 }
 .section-header {
     display: flex; justify-content: space-between; align-items: center;
@@ -277,7 +275,7 @@ body {
 }
 .btn-primary:hover { background: var(--dash-primary-hover); }
 
-/* Overview Banner */
+
 .welcome-banner {
     background: linear-gradient(135deg, var(--dash-primary), var(--dash-primary-hover));
     color: #fff;
@@ -290,7 +288,7 @@ body {
 .welcome-text h3 { margin: 0 0 0.5rem 0; font-family: var(--font-heading); font-size: 2rem; }
 .welcome-text p { margin: 0; font-size: 0.95rem; opacity: 0.9; }
 
-/* Metrics */
+
 .metric-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem; margin-bottom: 2rem;
@@ -301,7 +299,7 @@ body {
     border: 1px solid var(--dash-border);
     box-shadow: var(--shadow-soft);
     display: flex; align-items: flex-start; gap: 1rem;
-    min-width: 0; /* Prevents text overflow blowouts */
+    min-width: 0; 
 }
 .metric-icon {
     background: var(--dash-bg); color: var(--dash-primary);
@@ -316,7 +314,7 @@ body {
 .trend.positive { color: #2ecc71; }
 .trend.neutral { color: var(--dash-text-muted); }
 
-/* Charts */
+
 .chart-grid {
     display: grid; grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
@@ -324,7 +322,7 @@ body {
 .chart-wrapper { position: relative; height: 300px; width: 100%; }
 .card-title { margin: 0 0 1.5rem 0; font-family: var(--font-heading); font-size: 1.3rem; }
 
-/* Timeline */
+
 .activity-timeline { display: flex; flex-direction: column; gap: 1.5rem; padding-left: 0.5rem; }
 .activity-item { display: flex; gap: 1rem; position: relative; }
 .activity-item:not(:last-child)::before { content: ''; position: absolute; left: 5px; top: 15px; bottom: -20px; width: 2px; background: var(--dash-border); }
@@ -336,7 +334,7 @@ body {
 .activity-content p { margin: 0 0 0.3rem 0; font-size: 0.9rem; }
 .activity-content .time { font-size: 0.75rem; color: var(--dash-text-muted); }
 
-/* Tables */
+
 .table-responsive { overflow-x: auto; }
 .dash-table { width: 100%; border-collapse: collapse; text-align: left; }
 .dash-table th { padding: 1rem; border-bottom: 1px solid var(--dash-border); color: var(--dash-text-muted); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; white-space: nowrap; }
@@ -353,7 +351,7 @@ body {
 
 .pagination { display: flex; justify-content: flex-end; align-items: center; padding-top: 1rem; margin-top: 1rem; border-top: 1px solid var(--dash-border); }
 
-/* Client Cards */
+
 .search-box { display: flex; align-items: center; background: var(--dash-card-bg); border: 1px solid var(--dash-border); padding: 0.5rem 1rem; border-radius: 30px; }
 .search-box svg { width: 16px; height: 16px; color: var(--dash-text-muted); margin-right: 0.5rem; }
 .search-box input { border: none; background: transparent; outline: none; color: var(--dash-text); font-family: var(--font-ui); }
@@ -367,7 +365,7 @@ body {
 .profile-stats div { display: flex; flex-direction: column; font-size: 0.7rem; color: var(--dash-text-muted); }
 .profile-stats span { font-size: 1.1rem; font-weight: 600; color: var(--dash-text); }
 
-/* Settings Form */
+
 .settings-card { width: 100%; }
 .form-group { margin-bottom: 1.5rem; }
 .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--dash-text-muted); }
@@ -382,7 +380,7 @@ body {
 .toggle-switch input:checked + .slider:before { transform: translateX(16px); }
 .toggle-label { font-size: 0.9rem; }
 
-/* ---- RESPONSIVE ---- */
+
 .sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 90; opacity: 0; transition: opacity 0.3s; }
 
 @media (max-width: 1024px) {
@@ -399,20 +397,21 @@ body {
     .hamburger-btn { display: block; }
     
     .topbar-actions { border-right: none; padding-right: 0; }
-    .profile-info { display: none; } /* Hide names to save space */
+    .profile-info { display: none; } 
     .welcome-banner { flex-direction: column; text-align: center; gap: 1.5rem; }
     .topbar-right { gap: 0.5rem; }
     .dash-topbar { padding: 0 1rem; }
     .dash-content { padding: 1rem; }
     .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
     
-    /* Responsive sizing constraints */
+    
     .dash-card, .metric-card { padding: 1rem; }
     .chart-wrapper { height: 250px; }
 }
 
-/* Ensure controls are ALWAYS on the right side even if flex wraps or gets small */
+
 @media (max-width: 480px) {
-    .page-title { display: none; } /* Hide "Admin Dashboard" on very small screens to fit controls */
+    .page-title { display: none; } 
     .topbar-controls { margin-left: auto; }
 }
+
