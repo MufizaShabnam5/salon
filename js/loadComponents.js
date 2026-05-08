@@ -75,6 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        // Highlight Active Link
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.luxe-nav-link, .luxe-dropdown-content a, .luxe-mobile-link, .luxe-mobile-dropdown a');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPath) {
+                link.classList.add('active');
+                
+                // If it's in a dropdown, highlight the parent too
+                const dropdown = link.closest('.luxe-dropdown');
+                if (dropdown) {
+                    const parentLink = dropdown.querySelector('.luxe-nav-link');
+                    if (parentLink) parentLink.classList.add('active');
+                }
+            }
+        });
     }
     
     function initializeFooterLogic() {

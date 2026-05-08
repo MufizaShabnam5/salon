@@ -4,7 +4,7 @@
 
 /* ---- EDITORIAL HERO (Split Layout) ---- */
 .h2-hero {
-    min-height: 100svh;
+    min-height: 85vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 5rem 8rem 6rem;
+    padding: 6rem 5rem 6rem 6rem;
     position: relative;
     z-index: 2;
 }
@@ -75,7 +75,7 @@
 }
 .h2-hero-img-main {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1200&q=85&auto=format&fit=crop') center/cover no-repeat;
+    background: url('../images/hero1.avif') center/cover no-repeat;
     transform: scale(1.06);
     transition: transform 12s ease;
     filter: brightness(0.88);
@@ -107,9 +107,9 @@
 @media (max-width: 1023px) {
     .h2-hero { grid-template-columns: 1fr; min-height: 100svh; }
     .h2-hero-left {
-        padding: 8rem 2rem 5rem;
+        padding: 5rem 2rem 4rem;
         background: transparent;
-        min-height: 100svh;
+        min-height: 90svh;
         justify-content: center;
         position: relative; z-index: 2;
     }
@@ -123,7 +123,7 @@
 
 /* ---- PHILOSOPHY ---- */
 .h2-philosophy {
-    padding-block: 7rem;
+    padding-block: 5rem;
     background: var(--nav-bg);
     position: relative;
     overflow: hidden;
@@ -146,11 +146,13 @@
 .h2-philosophy cite { font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-primary); font-style: normal; }
 
 /* ---- ALTERNATING SERVICE ROWS ---- */
-.h2-services { background: var(--nav-dropdown-bg); padding-bottom: 4rem; }
-.h2-services-header { padding-top: 5rem; margin-bottom: 2rem; }
+.h2-services { background: var(--nav-dropdown-bg); padding-bottom: 3rem; }
+.h2-services-header { padding-top: 4rem; margin-bottom: 1.5rem; }
 .h2-service-row {
-    display: grid; grid-template-columns: 1fr 1fr;
-    min-height: 560px; border-bottom: 1px solid var(--nav-border);
+    display: grid; grid-template-columns: 0.85fr 1.15fr;
+    max-width: 1280px; margin-inline: auto;
+    min-height: 450px; border: 1px solid var(--nav-border);
+    margin-bottom: 3rem; border-radius: 8px; overflow: hidden;
 }
 .h2-service-row.reverse { direction: rtl; }
 .h2-service-row.reverse > * { direction: ltr; }
@@ -161,7 +163,7 @@
 
 .h2-svc-text {
     display: flex; flex-direction: column; justify-content: center;
-    padding: 5rem 6rem; background: var(--nav-dropdown-bg);
+    padding: 4rem 5rem; background: var(--nav-dropdown-bg);
 }
 .h2-svc-num {
     font-family: var(--font-logo); font-size: 5rem; font-weight: 700;
@@ -178,15 +180,35 @@
 .h2-svc-detail-item .d-label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-primary); }
 .h2-svc-detail-item .d-val { font-size: 1rem; font-weight: 500; }
 
-@media (max-width: 1023px) {
-    .h2-service-row { grid-template-columns: 1fr; min-height: auto; }
+/* ---- BREAKPOINTS FOR PREMIUM TREATMENTS ---- */
+
+/* Desktop (1024px - 1280px) */
+@media (max-width: 1280px) {
+    .h2-hero { min-height: 80vh; }
+    .h2-hero-left { padding: 4rem 4rem; }
+    .h2-service-row { max-width: 1000px; min-height: 400px; }
+    .h2-svc-text { padding: 3rem 4rem; }
+}
+
+/* Tablet (640px - 1024px) */
+@media (max-width: 1024px) {
+    .h2-service-row { grid-template-columns: 1fr 1fr; max-width: 90%; min-height: 380px; margin-bottom: 2rem; }
+    .h2-svc-text { padding: 2.5rem 2rem; }
+    .h2-svc-num { font-size: 3.5rem; margin-bottom: -1rem; }
+    .h2-svc-text h3 { font-size: 1.8rem; }
+    .h2-svc-detail { gap: 1.5rem; margin-bottom: 1.5rem; }
+}
+
+/* Mobile (< 640px) */
+@media (max-width: 640px) {
+    .h2-service-row { grid-template-columns: 1fr; max-width: 100%; min-height: auto; margin-bottom: 2.5rem; border-radius: 0; border-inline: none; }
     .h2-service-row.reverse { direction: ltr; }
-    .h2-svc-img { height: 400px; }
-    .h2-svc-text { padding: 4rem 2rem; }
+    .h2-svc-img { height: 280px; }
+    .h2-svc-text { padding: 2.5rem 1.5rem; }
 }
 
 /* ---- GIFT CARDS (REPLACING SENSORY) ---- */
-.h2-gift { background: var(--nav-dropdown-bg); padding-block: 8rem; border-bottom: 1px solid var(--nav-border); }
+.h2-gift { background: var(--nav-dropdown-bg); padding-block: 6rem; border-bottom: 1px solid var(--nav-border); }
 .h2-gift-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .h2-gift-img { position: relative; border-radius: var(--radius-md); overflow: hidden; }
 .h2-gift-img img { width: 100%; height: auto; display: block; transition: transform 0.8s ease; }
@@ -200,7 +222,7 @@
 @media (max-width: 1023px) { .h2-gift-inner { grid-template-columns: 1fr; gap: 4rem; text-align: left; } .h2-gift-text { padding-right: 0; } }
 
 /* ---- THE ARTISANS (TEAM) - NEW SECTION ---- */
-.h2-artisans { background: var(--nav-dropdown-bg); padding-block: 8rem; }
+.h2-artisans { background: var(--nav-dropdown-bg); padding-block: 6rem; }
 .h2-artisans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 4rem; }
 .h2-artisan-card { position: relative; group: artisan; }
 .h2-artisan-img {
@@ -225,7 +247,7 @@
 
 
 /* ---- THE JOURNEY (PROCESS) ---- */
-.h2-journey { background: var(--nav-bg); padding-block: 8rem; border-top: 1px solid var(--nav-border); }
+.h2-journey { background: var(--nav-bg); padding-block: 6rem; border-top: 1px solid var(--nav-border); }
 .h2-journey-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin-top: 4rem; }
 .h2-step { position: relative; }
 .h2-step-num {
@@ -244,7 +266,7 @@
 
 
 /* ---- EDITORIAL GALLERY ---- */
-.h2-gallery { background: var(--nav-dropdown-bg); padding-block: 8rem; border-top: 1px solid var(--nav-border); }
+.h2-gallery { background: var(--nav-dropdown-bg); padding-block: 6rem; border-top: 1px solid var(--nav-border); }
 .h2-gallery-strip {
     display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; grid-template-rows: 320px 320px;
     gap: 1rem; margin-top: 3.5rem;
@@ -258,7 +280,7 @@
 @media (max-width: 639px) { .h2-gallery-strip { grid-template-rows: repeat(4, 180px); gap: 0.5rem; } }
 
 /* ---- THE PRIVATE SUITE (REPLACING TESTIMONIAL) ---- */
-.h2-suite { position: relative; overflow: hidden; background: #0A0806; padding-block: 10rem; }
+.h2-suite { position: relative; overflow: hidden; background: #0A0806; padding-block: 7rem; }
 .h2-suite-bg {
     position: absolute; inset: 0;
     background: url('https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat fixed;
@@ -271,7 +293,7 @@
 .h2-suite-inner p { color: rgba(245,239,230,0.7); font-size: 1.1rem; margin-bottom: 3rem; }
 
 /* ---- NEWSLETTER ---- */
-.h2-newsletter { background: var(--nav-dropdown-bg); padding-block: 8rem; }
+.h2-newsletter { background: var(--nav-dropdown-bg); padding-block: 6rem; }
 .h2-newsletter-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .h2-newsletter-text h2 { margin-bottom: 1.5rem; }
 .h2-newsletter-form { display: flex; gap: 0; }

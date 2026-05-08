@@ -11,10 +11,31 @@ body.blog-page {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/* Fix for dark mode white line issue */
+[data-theme='dark'].blog-page,
+[data-theme='dark'] .blog-page,
+[data-theme='dark'] html {
+    background-color: #0F0F0F !important;
+}
+
 body.blog-page[data-theme='dark'] {
     background-color: #0F0F0F !important;
     background-image: none !important;
     color: #F2F2F2 !important;
+}
+
+/* Ensure no white background bleeds through in dark mode */
+body.blog-page[data-theme='dark'] main,
+body.blog-page[data-theme='dark'] section:not(.blog-hero) {
+    background-color: #0F0F0F !important;
+    background-image: none !important;
+    border-top: none !important;
+    border-color: transparent !important;
+}
+body.blog-page[data-theme='dark'] .blog-hero {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 /* ---- HERO SECTION ---- */
@@ -89,6 +110,15 @@ body.blog-page[data-theme='dark'] .blog-hero::before {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
+.featured-card:hover h2 {
+    color: #000 !important;
+}
+
+body.blog-page[data-theme='dark'] .featured-content h2,
+body.blog-page[data-theme='dark'] .featured-card:hover h2 {
+    color: #fff !important;
+}
+
 .featured-img-wrap {
     position: relative;
     overflow: hidden;
@@ -113,6 +143,7 @@ body.blog-page[data-theme='dark'] .blog-hero::before {
     justify-content: center;
 }
 
+
 .post-category {
     display: inline-block;
     font-size: 0.75rem;
@@ -127,6 +158,7 @@ body.blog-page[data-theme='dark'] .blog-hero::before {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: #000 !important;
 }
 
 .featured-content p {
@@ -191,10 +223,16 @@ body.blog-page[data-theme='dark'] .blog-hero::before {
     margin-bottom: 1rem;
     line-height: 1.4;
     transition: color 0.3s ease;
+    color: #000 !important;
 }
 
 .blog-card:hover h3 {
-    color: var(--color-primary);
+    color: #000 !important;
+}
+
+body.blog-page[data-theme='dark'] .blog-card-body h3,
+body.blog-page[data-theme='dark'] .blog-card:hover h3 {
+    color: #fff !important;
 }
 
 .blog-card-body p {
@@ -213,15 +251,17 @@ body.blog-page[data-theme='dark'] .featured-card {
     border-color: rgba(255,255,255,0.1);
 }
 
+
+
 body.blog-page[data-theme='dark'] .blog-card-body p,
 body.blog-page[data-theme='dark'] .featured-content p {
     color: #ccc;
 }
 
-body.blog-page[data-theme='dark'] .blog-card-body h3,
-body.blog-page[data-theme='dark'] .featured-content h2 {
-    color: #fff;
-}
+
+
+
+
 
 .blog-card-footer {
     display: flex;
