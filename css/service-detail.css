@@ -1,7 +1,4 @@
-
-
-
-.sd-hero {
+﻿.sd-hero {
     position: relative;
     height: 60vh;
     min-height: 450px;
@@ -20,8 +17,11 @@
 
 .sd-hero-overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(21, 19, 18, 0.65); 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 19, 18, 0.65);
     z-index: 1;
 }
 
@@ -48,7 +48,6 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
-
 
 .sd-overview {
     padding: 8rem 0;
@@ -108,7 +107,6 @@
     margin-top: 3px;
 }
 
-
 .sd-process-section {
     padding: 8rem 0;
     background-color: var(--color-bg-alt);
@@ -124,7 +122,8 @@
 .sd-timeline::before {
     content: '';
     position: absolute;
-    top: 0; left: 6px;
+    top: 0;
+    left: 6px;
     width: 2px;
     height: 100%;
     background: var(--color-border);
@@ -141,7 +140,8 @@
 
 .timeline-dot {
     position: absolute;
-    top: 0; left: -2rem;
+    top: 0;
+    left: -2rem;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -185,7 +185,6 @@
     margin: 0;
 }
 
-
 .sd-gallery-section {
     padding: 8rem 0;
     background-color: var(--color-bg);
@@ -215,7 +214,6 @@
     transform: scale(1.05);
 }
 
-
 .sd-packages-section {
     padding: 8rem 0;
     background-color: var(--color-bg-alt);
@@ -226,7 +224,7 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     margin-top: 4rem;
-    align-items: center; 
+    align-items: center;
 }
 
 .pkg-card {
@@ -249,13 +247,12 @@
     transform: scale(1.05);
     box-shadow: var(--shadow-soft);
     z-index: 2;
-    background: #fff; 
+    background: #fff;
 }
 
 .pkg-card.popular:hover {
     transform: scale(1.05) translateY(-10px);
 }
-
 
 [data-theme="dark"] .pkg-card.popular {
     background: #1A1716;
@@ -307,7 +304,8 @@
 }
 
 .pkg-features svg {
-    width: 20px; height: 20px;
+    width: 20px;
+    height: 20px;
     color: var(--color-primary);
     flex-shrink: 0;
 }
@@ -315,7 +313,6 @@
 .pkg-card .btn-outline, .pkg-card .btn-primary {
     width: 100%;
 }
-
 
 @media (max-width: 992px) {
     .sd-overview-grid {
@@ -345,4 +342,3 @@
         padding: 2.5rem 1.5rem;
     }
 }
-

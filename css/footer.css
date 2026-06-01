@@ -1,7 +1,5 @@
-
-
-.luxe-footer {
-    background-color: var(--nav-dropdown-bg); 
+﻿.luxe-footer {
+    background-color: var(--nav-dropdown-bg);
     border-top: 1px solid var(--nav-border);
     padding: 4rem 0 1rem;
     font-family: var(--nav-font-ui);
@@ -50,8 +48,9 @@
     color: #fff;
     transform: translateY(-3px);
 }
+
 [data-theme='dark'] .footer-socials a:hover {
-    color: #1A1A1A; 
+    color: #1A1A1A;
 }
 
 .footer-socials svg {
@@ -89,6 +88,7 @@
     color: var(--nav-accent-primary);
     transform: translateX(3px);
 }
+
 [dir="rtl"] .footer-links a:hover {
     transform: translateX(-3px);
 }
@@ -137,7 +137,6 @@
 .footer-legal a:hover {
     color: var(--nav-accent-primary);
 }
-
 
 @media (max-width: 1023px) {
     .footer-grid {

@@ -1,7 +1,4 @@
-
-
-
-.ct-hero {
+﻿.ct-hero {
     position: relative;
     min-height: 80vh;
     display: flex;
@@ -58,7 +55,6 @@
     max-width: 500px;
     margin-inline: auto;
 }
-
 
 .ct-info-bar {
     background: var(--nav-bg);
@@ -141,7 +137,6 @@
     border-color: var(--color-primary);
 }
 
-
 .ct-main {
     background: var(--nav-dropdown-bg);
     padding-block: 6rem;
@@ -167,8 +162,10 @@
 .ct-form-wrap::after {
     content: '';
     position: absolute;
-    top: 0; right: 0;
-    width: 150px; height: 150px;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
     background: radial-gradient(circle at top right, rgba(196, 164, 124, 0.08), transparent 70%);
     pointer-events: none;
 }
@@ -203,9 +200,7 @@
     margin-left: 0.5rem;
 }
 
-.ct-field input,
-.ct-field select,
-.ct-field textarea {
+.ct-field input, .ct-field select, .ct-field textarea {
     padding: 1rem 1.25rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--nav-border);
@@ -216,9 +211,7 @@
     transition: all 0.3s ease;
 }
 
-.ct-field input:focus,
-.ct-field select:focus,
-.ct-field textarea:focus {
+.ct-field input:focus, .ct-field select:focus, .ct-field textarea:focus {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 0 4px rgba(196, 164, 124, 0.1);
@@ -252,7 +245,6 @@
     width: 20px;
     height: 20px;
 }
-
 
 .ct-map-wrap {
     border-radius: var(--radius-md);
@@ -314,7 +306,6 @@
     stroke: #fff;
 }
 
-
 .ct-cta {
     background: var(--color-primary);
     padding-block: 5rem;
@@ -347,21 +338,30 @@
     color: #1A1A1A;
 }
 
-
 @media (max-width: 1199px) {
-    .ct-info-grid { grid-template-columns: repeat(2, 1fr); }
+    .ct-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 1023px) {
-    .ct-main-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .ct-main-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
 }
 
 @media (max-width: 639px) {
-    .ct-info-grid { grid-template-columns: 1fr; }
-    .ct-row { grid-template-columns: 1fr; }
-    .ct-hero-content h1 { font-size: 3rem; }
+    .ct-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .ct-row {
+        grid-template-columns: 1fr;
+    }
+    .ct-hero-content h1 {
+        font-size: 3rem;
+    }
 }
-
 
 .floating-wa {
     position: fixed;
@@ -405,11 +405,18 @@
         right: 1.5rem;
         padding: 0.8rem;
     }
-    .floating-wa span { display: none; }
+    .floating-wa span {
+        display: none;
+    }
 }
 
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
