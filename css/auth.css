@@ -1,12 +1,12 @@
-﻿@import url('https: //fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500;600&display=swap');
+@import url('https: //fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500;600&display=swap');
 :root {
     --auth-bg: #F5EFEB;
     --auth-card-bg: #FFFFFF;
     --auth-text-dark: #332F2A;
     --auth-text-muted: #8E867D;
     --auth-border: #E6DDD3;
-    --auth-primary: #B87333;
-    --auth-primary-hover: #9E6129;
+    --auth-primary: #C4A47C;
+    --auth-primary-hover: #B09068;
     --font-heading: 'Cormorant Garamond', serif;
     --font-ui: 'Inter', sans-serif;
 }
@@ -17,8 +17,8 @@
     --auth-text-dark: #F5EFEB;
     --auth-text-muted: #A39D98;
     --auth-border: #3D3835;
-    --auth-primary: #D48C46;
-    --auth-primary-hover: #E3A366;
+    --auth-primary: #D4B68D;
+    --auth-primary-hover: #E0C299;
 }
 
 body {
@@ -176,6 +176,10 @@ body {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 600;
+    color: var(--auth-text-dark);
+}
+
+.auth-brand:hover {
     color: var(--auth-text-dark);
 }
 

@@ -1,5 +1,5 @@
-﻿.h2-hero {
-    min-height: 85vh;
+.h2-hero {
+    min-height: 75vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 6rem 5rem 6rem 6rem;
+    padding: 7rem 5rem 2rem 6rem;
     position: relative;
     z-index: 2;
 }
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     animation: fadeUp 0.8s ease both;
 }
 
@@ -52,23 +52,21 @@
     content: '';
     height: 1px;
     background: var(--color-primary);
-    flex: 1;
+    width: 40px;
+    flex-shrink: 0;
     opacity: 0.5;
 }
 
-.h2-hero-eyebrow::before {
-    max-width: 40px;
-}
-
 .h2-hero-eyebrow::after {
-    max-width: 40px;
+    flex: 1;
+    width: auto;
 }
 
 .h2-hero-left h1 {
     color: #F5EFE6;
     font-size: clamp(2.8rem, 4.5vw, 5rem);
     line-height: 1.08;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     animation: fadeUp 0.9s 0.1s ease both;
 }
 
@@ -86,7 +84,7 @@
 }
 
 .h2-hero-cta {
-    margin-top: 3.5rem;
+    margin-top: 2rem;
     animation: fadeUp 1s 0.3s ease both;
 }
 
@@ -173,15 +171,28 @@
 @media (max-width: 1023px) {
     .h2-hero {
         grid-template-columns: 1fr;
-        min-height: 100svh;
+        min-height: 70svh;
     }
     .h2-hero-left {
-        padding: 5rem 2rem 4rem;
+        padding: 6rem 2rem 2rem;
         background: transparent;
-        min-height: 90svh;
+        min-height: 70svh;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         position: relative;
         z-index: 2;
+    }
+    .h2-hero-eyebrow {
+        justify-content: center;
+        width: auto;
+    }
+    .h2-hero-eyebrow::before, .h2-hero-eyebrow::after {
+        flex: 0 0 40px;
+        width: 40px;
+    }
+    .h2-hero-cta .btn-group {
+        justify-content: center;
     }
     .h2-hero-left::after {
         display: none;
@@ -198,10 +209,12 @@
         background: linear-gradient(to top, rgba(14,12,9,0.90) 40%, rgba(14,12,9,0.50) 100%);
     }
     .h2-hero-badge {
-        bottom: auto;
-        top: 2rem;
-        right: 1.5rem;
-        padding: 1rem 1.5rem;
+        bottom: 2rem;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        padding: 1rem 2rem;
+        z-index: 5;
     }
     .h2-hero-badge .big {
         font-size: 2rem;
@@ -292,13 +305,14 @@
 .h2-service-row {
     display: grid;
     grid-template-columns: 0.85fr 1.15fr;
-    max-width: 1280px;
+    max-width: 900px;
     margin-inline: auto;
-    min-height: 450px;
+    height: 490px;
     border: 1px solid var(--nav-border);
-    margin-bottom: 3rem;
-    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
 }
 
 .h2-service-row.reverse {
@@ -315,11 +329,17 @@
 }
 
 .h2-svc-img img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
     display: block;
+}
+
+.h2-service-row.reverse .h2-svc-img img {
+    object-position: top center;
 }
 
 @media (hover: hover) {
@@ -331,19 +351,20 @@
 .h2-svc-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 4rem 5rem;
+    justify-content: flex-start;
+    padding: 2.5rem 2.5rem 5rem;
     background: var(--nav-dropdown-bg);
 }
 
 .h2-svc-num {
     font-family: var(--font-logo);
-    font-size: 5rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: var(--color-primary);
     opacity: 0.12;
     line-height: 1;
-    margin-bottom: -1.5rem;
+    margin-top: -0.5rem;
+    margin-bottom: -0.9rem;
     display: block;
 }
 
@@ -353,27 +374,28 @@
     text-transform: uppercase;
     color: var(--color-primary);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .h2-svc-text h3 {
-    margin-bottom: 1rem;
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    margin-bottom: 0.6rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
 }
 
 .h2-svc-text p {
-    margin-bottom: 1.75rem;
-    font-size: 1rem;
-    line-height: 1.8;
+    margin-bottom: auto;
+    padding-bottom: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--color-muted);
 }
 
 .h2-svc-detail {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    margin-bottom: 2.5rem;
-    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--nav-border);
 }
 
@@ -397,57 +419,116 @@
 
 @media (max-width: 1280px) {
     .h2-hero {
-        min-height: 80vh;
+        min-height: 70vh;
     }
     .h2-hero-left {
-        padding: 4rem 4rem;
+        padding: 6rem 4rem 2rem;
     }
     .h2-service-row {
         max-width: 1000px;
-        min-height: 400px;
+        height: 490px;
     }
     .h2-svc-text {
-        padding: 3rem 4rem;
+        padding: 2.5rem 3rem 5rem;
     }
 }
 
 @media (max-width: 1024px) {
     .h2-service-row {
         grid-template-columns: 1fr 1fr;
-        max-width: 90%;
-        min-height: 380px;
+        max-width: 95%;
+        min-height: 350px;
+        height: auto;
         margin-bottom: 2rem;
     }
     .h2-svc-text {
-        padding: 2.5rem 2rem;
+        padding: 1.5rem;
+        justify-content: flex-start;
     }
     .h2-svc-num {
-        font-size: 3.5rem;
-        margin-bottom: -1rem;
+        font-size: 3rem;
+        margin-bottom: -0.8rem;
+    }
+    .h2-svc-label {
+        margin-bottom: 0.4rem;
     }
     .h2-svc-text h3 {
         font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .h2-svc-text p {
+        margin-bottom: 0;
+        padding-bottom: 0.75rem;
+        font-size: 0.95rem;
     }
     .h2-svc-detail {
-        gap: 1.5rem;
-        margin-bottom: 1.5rem;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding-top: 0.75rem;
     }
 }
 
 @media (max-width: 640px) {
+    .h2-hero-left {
+        padding: 5.5rem 1.5rem 8.5rem;
+        justify-content: center;
+    }
+    .h2-hero-eyebrow {
+        width: auto;
+        margin-bottom: 1rem;
+    }
+    .h2-hero-eyebrow span {
+        letter-spacing: 2px;
+    }
+    .h2-hero-eyebrow::before, .h2-hero-eyebrow::after {
+        flex: 0 0 30px;
+        width: 30px;
+        opacity: 0.8;
+    }
+    .h2-hero-left h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .h2-hero-cta {
+        margin-top: 1.5rem;
+    }
+    .h2-hero-badge {
+        width: 120px;
+        height: 120px;
+        padding: 0.5rem;
+        bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .h2-hero-badge .big {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .h2-hero-badge .small {
+        font-size: 0.7rem;
+        text-align: center;
+        margin-top: 2px;
+    }
     .h2-service-row {
         grid-template-columns: 1fr;
         max-width: 100%;
         min-height: auto;
+        height: auto;
         margin-bottom: 2.5rem;
         border-radius: 0;
         border-inline: none;
     }
-    .h2-service-row.reverse {
-        direction: ltr;
+    .h2-service-row.reverse .h2-svc-text {
+        order: 0;
     }
     .h2-svc-img {
-        height: 280px;
+        min-height: 350px;
+    }
+    .h2-service-row.reverse {
+        direction: ltr;
     }
     .h2-svc-text {
         padding: 2.5rem 1.5rem;
@@ -653,23 +734,15 @@
     font-size: 6rem;
     line-height: 1;
     font-weight: 700;
-    color: rgba(0,0,0,0.1);
+    color: var(--color-primary);
     margin-bottom: 1rem;
     transition: all 0.4s ease;
     display: inline-block;
 }
 
-[data-theme='dark'] .h2-step-num {
-    color: rgba(255,255,255,0.1);
-}
-
 @media (hover: hover) {
     .h2-step:hover .h2-step-num {
-        color: var(--color-primary);
         transform: translateY(-5px);
-    }
-    [data-theme='dark'] .h2-step:hover .h2-step-num {
-        color: var(--color-primary);
     }
 }
 

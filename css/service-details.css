@@ -1,4 +1,4 @@
-﻿html {
+html {
     scroll-behavior: smooth;
 }
 
@@ -286,7 +286,7 @@ article[id] {
 }
 
 .sd-list li::before {
-    content: 'ÃƒÂ¢Ã…â€œÃ‚Â¦';
+    content: '✦';
     color: var(--color-primary);
     font-size: .7rem;
     flex-shrink: 0;
@@ -509,7 +509,7 @@ article[id] {
 }
 
 .pkg ul li::before {
-    content: 'ÃƒÂ¢Ã…â€œÃ‚Â¦ ';
+    content: '✦ ';
     color: var(--color-primary);
     font-size: .7rem;
 }

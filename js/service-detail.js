@@ -41,7 +41,7 @@ const serviceData = {
             description: "Transform your look with precision cuts, bespoke styling, advanced colouring techniques, and deeply nourishing hair treatments from our master stylists.",
             benefits: [
                 "Expert color-matching and balayage",
-                "KÃƒÆ’Ã‚Â©rastase nourishing treatments",
+                "Kérastase nourishing treatments",
                 "Precision styling for your face shape",
                 "Damage-free coloring techniques"
             ],

@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --nav-bg: rgba(255, 255, 255, 0.95);
     --nav-text: #1A1A1A;
     --nav-accent-primary: #C4A47C;
@@ -72,6 +72,10 @@
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
+}
+
+.luxe-logo:hover {
+    color: var(--nav-text);
 }
 
 .luxe-logo span {
