@@ -24,8 +24,8 @@
 
 .svc-hero {
     position: relative;
-    height: 75vh;
-    min-height: 600px;
+    height: 85vh;
+    min-height: 650px;
     background-image: url('../images/svc_hero_light.png');
     background-size: cover;
     background-position: center;
@@ -54,6 +54,8 @@
     z-index: 2;
     max-width: 800px;
     padding: 0 2rem;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .svc-hero-eyebrow {
