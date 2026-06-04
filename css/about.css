@@ -1,4 +1,4 @@
-﻿.reveal {
+.reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
@@ -85,14 +85,31 @@
 .fluid-hero-text h1 {
     font-size: clamp(3.5rem, 7vw, 7rem);
     color: #F5EFE6;
-    line-height: 1.1;
+    line-height: 1.2;
     margin: 0;
+    padding-bottom: 0.1em;
 }
 
 .fluid-hero-text h1 em {
     color: var(--color-primary);
     font-style: italic;
     font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+    .fluid-hero {
+        height: 60svh;
+        min-height: 450px;
+    }
+    .fluid-hero-text h1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .fluid-hero-text h1 {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+    }
 }
 
 .fluid-split-container {
@@ -319,9 +336,12 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .fluid-timeline-grid {
         grid-template-columns: 1fr;
+    }
+    .fluid-time-img {
+        height: 300px;
     }
 }
 
@@ -425,26 +445,63 @@
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .fluid-art-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
     .fluid-art-card {
-        height: 450px;
+        height: 520px;
     }
+    .fluid-art-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (hover: none) {
     .fluid-art-quote {
-        max-height: 150px;
+        max-height: 200px;
         opacity: 1;
         margin-top: 1.5rem;
     }
 }
 
+@media (max-width: 767px) {
+    .fluid-art-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .fluid-art-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+}
+
 .fluid-cta {
-    background: #0A0806;
+    position: relative;
+    background: url('../images/story_bg_light.png') center/cover no-repeat;
     padding-block: 8rem;
     text-align: center;
     color: #F5EFE6;
+}
+
+[data-theme='dark'] .fluid-cta {
+    background: url('../images/story_bg_dark.png') center/cover no-repeat;
+}
+
+.fluid-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 8, 6, 0.4); /* Overlay for text readability */
+}
+
+.fluid-cta > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .fluid-cta h2 {
