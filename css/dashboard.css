@@ -95,7 +95,7 @@ body {
 }
 
 .dash-logo a {
-    font-family: var(--font-heading);
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--dash-text);
@@ -105,10 +105,13 @@ body {
     align-items: center;
 }
 
+.dash-logo a:hover {
+    color: var(--dash-text);
+}
+
 .dash-logo a span {
     color: var(--dash-primary);
     font-style: italic;
-    font-weight: 500;
 }
 
 .dash-nav {
