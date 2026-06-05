@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --dash-bg: #F5EFEB;
     --dash-card-bg: #FFFFFF;
     --dash-text: #332F2A;
@@ -100,11 +100,15 @@ body {
     font-weight: 600;
     color: var(--dash-text);
     text-decoration: none;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
 }
 
 .dash-logo a span {
     color: var(--dash-primary);
     font-style: italic;
+    font-weight: 500;
 }
 
 .dash-nav {

@@ -1,4 +1,4 @@
-﻿body.blog-page {
+body.blog-page {
     background-image: url('../images/blog_bg.png');
     background-attachment: fixed;
     background-size: cover;
@@ -25,18 +25,22 @@ body.blog-page[data-theme='dark'] main, body.blog-page[data-theme='dark'] sectio
 }
 
 body.blog-page[data-theme='dark'] .blog-hero {
-    background-color: transparent !important;
+    background: url('../images/blog_hero_dark.png') center/cover no-repeat !important;
     border-bottom: none !important;
     box-shadow: none !important;
 }
 
 .blog-hero {
     position: relative;
+    min-height: 100vh;
     padding-block: 12rem 8rem;
-    background: url('../images/blog_hero_main.png') center/cover no-repeat;
+    background: url('../images/blog_hero_light.png') center/cover no-repeat;
     text-align: center;
     border-bottom: 1px solid var(--nav-border);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blog-hero::before {
@@ -442,6 +446,14 @@ body.blog-page[data-theme='dark'] .blog-card-body p, body.blog-page[data-theme='
 }
 
 @media (max-width: 1023px) {
+    .blog-hero {
+        min-height: 70vh;
+        padding-block: 8rem 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     .blog-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -457,6 +469,14 @@ body.blog-page[data-theme='dark'] .blog-card-body p, body.blog-page[data-theme='
 }
 
 @media (max-width: 767px) {
+    .blog-hero {
+        min-height: 50vh;
+        padding-block: 6rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     .blog-grid {
         grid-template-columns: 1fr;
     }
@@ -469,6 +489,13 @@ body.blog-page[data-theme='dark'] .blog-card-body p, body.blog-page[data-theme='
     }
     .featured-content h2 {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-hero {
+        min-height: 75vh;
+        padding-block: 5rem 2rem;
     }
 }
 

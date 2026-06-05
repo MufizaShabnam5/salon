@@ -77,8 +77,8 @@ article[id] {
 
 .sd-hero {
     position: relative;
-    height: 80vh;
-    min-height: 560px;
+    height: 95vh;
+    min-height: 700px;
     background: url('../images/service_massage.png') center/cover no-repeat;
     background-attachment: fixed;
     display: flex;
@@ -115,11 +115,14 @@ article[id] {
     position: relative;
     z-index: 2;
     padding: 0 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .sd-hero-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(3.5rem,8vw,7rem);
+    font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 500;
     letter-spacing: -.02em;
     margin-bottom: .8rem;
@@ -133,7 +136,7 @@ article[id] {
 }
 
 .sd-hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     opacity: .8;
     letter-spacing: .06em;
     text-transform: uppercase;
@@ -253,6 +256,10 @@ article[id] {
     margin-bottom: 5rem;
 }
 
+.sd-info {
+    padding: 2.5rem 2rem 0 1.5rem;
+}
+
 .sd-info h3, .sd-process h3 {
     font-family: var(--font-heading);
     font-size: 1.9rem;
@@ -311,16 +318,16 @@ article[id] {
 .sd-meta {
     flex: 1 1 120px;
     background: var(--color-card-bg);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-primary);
     border-radius: 10px;
     padding: 1rem 1.2rem;
     text-align: center;
-    transition: border-color .3s ease, box-shadow .3s ease;
+    transition: box-shadow .3s ease, transform .3s ease;
 }
 
 .sd-meta:hover {
-    border-color: var(--color-primary);
     box-shadow: 0 4px 16px rgba(196,164,124,.1);
+    transform: translateY(-2px);
 }
 
 .sd-meta span {
@@ -428,7 +435,7 @@ article[id] {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 .pkg {
@@ -438,6 +445,8 @@ article[id] {
     padding: 2.8rem 2rem;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
     transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
 }
 
@@ -449,13 +458,12 @@ article[id] {
 
 .pkg.popular {
     border: 2px solid var(--color-primary);
-    transform: scale(1.05);
     z-index: 2;
     box-shadow: 0 12px 40px rgba(196,164,124,.15);
 }
 
 .pkg.popular:hover {
-    transform: scale(1.05) translateY(-8px);
+    transform: translateY(-8px);
     box-shadow: 0 24px 50px rgba(196,164,124,.2);
 }
 
@@ -495,6 +503,7 @@ article[id] {
     padding: 0;
     margin: 0 0 2rem;
     text-align: left;
+    flex-grow: 1;
 }
 
 .pkg ul li {
@@ -584,6 +593,9 @@ article[id] {
 }
 
 @media (max-width: 960px) {
+    .sd-hero {
+        background-attachment: scroll;
+    }
     .sd-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -592,12 +604,6 @@ article[id] {
         grid-template-columns: 1fr;
         max-width: 420px;
         margin: 0 auto;
-    }
-    .pkg.popular {
-        transform: none;
-    }
-    .pkg.popular:hover {
-        transform: translateY(-8px);
     }
 }
 
@@ -611,6 +617,9 @@ article[id] {
     .sd-process {
         padding: 1.5rem;
     }
+    .sd-info {
+        padding: 0 1rem;
+    }
     .sd-meta-row {
         gap: .7rem;
     }
@@ -621,52 +630,52 @@ article[id] {
 
 @media (max-width: 480px) {
     .sd-hero {
-        height: 50vh;
-        min-height: 360px;
-    }
-    .sd-hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .pkg {
-        padding: 2rem 1.2rem;
-    }
-    .pkg-price {
-        font-size: 2.4rem;
-    }
-    .sd-meta-row {
-        flex-direction: column;
-    }
-    .sd-meta {
-        flex: 1 1 auto;
-    }
-}
-
-@media (max-width: 390px) {
-    .sd-hero {
-        height: auto;
-        min-height: unset;
+        height: 60vh;
+        min-height: 480px;
         padding-top: 100px;
-        padding-bottom: 3.5rem;
+        padding-bottom: 2rem;
+        background-attachment: scroll;
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        align-items: flex-start;
+        box-sizing: border-box;
+    }
+    .sd-hero-content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 0 0 0;
     }
     .sd-hero-content h1 {
-        font-size: 2.2rem;
-        line-height: 1.1;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-left: auto;
+        margin-right: auto;
     }
     .sd-hero-content p {
-        font-size: .9rem;
+        font-size: 0.95rem;
         letter-spacing: .03em;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
     .sd-hero-content .btn-group, .sd-hero-content > div[style] {
-        flex-direction: column;
-        align-items: center;
-        gap: .8rem;
-        margin-top: 1.5rem;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: .8rem !important;
+        margin-top: 2rem !important;
+        width: 100% !important;
     }
     .sd-hero-content .btn-primary, .sd-hero-content .btn-secondary {
-        width: 100%;
-        text-align: center;
-        padding: .85rem 1rem;
-        font-size: .85rem;
+        width: 100% !important;
+        max-width: 280px;
+        text-align: center !important;
+        padding: .85rem 1rem !important;
+        font-size: .85rem !important;
+        margin: 0 auto !important;
     }
     .sd-hero-scroll {
         display: none;
@@ -680,5 +689,17 @@ article[id] {
     .sd-tag {
         font-size: .75rem;
         padding: .45rem 1rem;
+    }
+    .pkg {
+        padding: 2rem 1.2rem;
+    }
+    .pkg-price {
+        font-size: 2.4rem;
+    }
+    .sd-meta-row {
+        flex-direction: column;
+    }
+    .sd-meta {
+        flex: 1 1 auto;
     }
 }
