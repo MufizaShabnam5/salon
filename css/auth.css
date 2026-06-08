@@ -350,16 +350,10 @@ body {
     pointer-events: none;
 }
 
-.icon-user {
-    color: #6B4C9A;
-}
-
-.icon-mail {
-    color: #D4BEE4;
-}
-
+.icon-user,
+.icon-mail,
 .icon-phone {
-    color: #D94680;
+    /* Colors removed to match standard icon styling */
 }
 
 .form-input {
@@ -385,6 +379,7 @@ body {
     box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.1);
 }
 
+.input-wrap:hover .input-icon,
 .input-wrap:focus-within .input-icon {
     color: var(--auth-primary);
 }

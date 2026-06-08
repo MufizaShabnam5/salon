@@ -75,7 +75,7 @@
     border-radius: var(--radius-md);
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--nav-border);
+    border: 2px solid var(--nav-border);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -129,12 +129,6 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     display: inline-block;
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-}
-
-.ct-info-card:hover .ct-link {
-    border-color: var(--color-primary);
 }
 
 .ct-main {
