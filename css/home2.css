@@ -7,7 +7,7 @@
 }
 
 .h2-hero-left {
-    background: #0E0C09;
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,9 +27,13 @@
     right: -1px;
     bottom: 0;
     width: 80px;
-    background: linear-gradient(to right, #0E0C09, transparent);
+    background: linear-gradient(to right, #fff, transparent);
     z-index: 3;
     pointer-events: none;
+}
+
+[data-theme='dark'] .h2-hero-left::after {
+    background: linear-gradient(to right, #0A0806, transparent);
 }
 
 .h2-hero-eyebrow {
@@ -44,17 +48,25 @@
     font-size: 0.72rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: #1A1A1A;
     font-weight: 600;
 }
 
 .h2-hero-eyebrow::before, .h2-hero-eyebrow::after {
     content: '';
     height: 1px;
-    background: var(--color-primary);
+    background: #1A1A1A;
     width: 40px;
     flex-shrink: 0;
     opacity: 0.5;
+}
+
+[data-theme='dark'] .h2-hero-eyebrow span {
+    color: var(--color-primary);
+}
+[data-theme='dark'] .h2-hero-eyebrow::before,
+[data-theme='dark'] .h2-hero-eyebrow::after {
+    background: var(--color-primary);
 }
 
 .h2-hero-eyebrow::after {
@@ -63,7 +75,7 @@
 }
 
 .h2-hero-left h1 {
-    color: #F5EFE6;
+    color: #1A1A1A;
     font-size: clamp(2.8rem, 4.5vw, 5rem);
     line-height: 1.08;
     margin-bottom: 1.5rem;
@@ -76,11 +88,21 @@
 }
 
 .h2-hero-left p {
-    color: rgba(245,239,230,0.65);
+    color: var(--color-muted, #555);
     font-size: 1.05rem;
     max-width: 420px;
     margin-bottom: 0;
     animation: fadeUp 1s 0.2s ease both;
+}
+
+[data-theme='dark'] .h2-hero-left h1 {
+    color: #F5EFE6;
+}
+[data-theme='dark'] .h2-hero-left h1 em {
+    color: var(--color-primary);
+}
+[data-theme='dark'] .h2-hero-left p {
+    color: rgba(245,239,230,0.65);
 }
 
 .h2-hero-cta {
@@ -93,12 +115,24 @@
 }
 
 .h2-hero-cta .btn-secondary {
+    color: #1A1A1A !important;
+    border-color: #1A1A1A;
+}
+
+@media (hover: hover) {
+    .h2-hero-cta .btn-secondary:hover {
+        border-color: var(--color-primary);
+        background: rgba(196, 164, 124, 0.08);
+    }
+}
+
+[data-theme='dark'] .h2-hero-cta .btn-secondary {
     color: #F5EFE6 !important;
     border-color: rgba(245,239,230,0.35);
 }
 
 @media (hover: hover) {
-    .h2-hero-cta .btn-secondary:hover {
+    [data-theme='dark'] .h2-hero-cta .btn-secondary:hover {
         border-color: #fff;
         background: rgba(255,255,255,0.08);
     }

@@ -1,17 +1,21 @@
-﻿.luxe-footer {
+.luxe-footer {
     background-color: var(--nav-dropdown-bg);
     border-top: 1px solid var(--nav-border);
-    padding: 4rem 0 1rem;
+    padding: 3rem 0 1rem;
     font-family: var(--nav-font-ui);
     color: var(--nav-text);
     transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+[data-theme='dark'] .luxe-footer {
+    background-color: var(--nav-dropdown-bg);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
     gap: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer-brand .footer-logo {
@@ -34,10 +38,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 1px solid var(--nav-border);
+    border: 1px solid var(--color-primary);
     color: var(--nav-text);
     transition: all 0.3s ease;
 }
@@ -54,14 +58,21 @@
 }
 
 .footer-socials svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     fill: currentColor;
 }
 
+.footer-socials a[aria-label="Facebook"] svg,
+.footer-socials a[aria-label="Twitter"] svg {
+    width: 24px;
+    height: 24px;
+}
+
+
 .footer-heading {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     color: var(--nav-text);
 }
 
@@ -72,7 +83,7 @@
 }
 
 .footer-links li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.15rem;
 }
 
 .footer-links a {
@@ -101,26 +112,29 @@
 
 .contact-list li {
     display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.2rem;
     opacity: 0.8;
     line-height: 1.5;
 }
 
 .contact-list svg {
-    width: 20px;
-    height: 20px;
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    padding: 9px;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
     fill: var(--nav-accent-primary);
     flex-shrink: 0;
-    margin-top: 2px;
 }
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--nav-border);
     opacity: 0.7;
 }

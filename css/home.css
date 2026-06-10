@@ -177,6 +177,8 @@
     aspect-ratio: 4/5;
     cursor: pointer;
     background: #111;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s ease;
 }
 
 .service-img-card img {
@@ -278,11 +280,20 @@
     height: 14px;
     stroke: var(--color-primary);
     fill: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, stroke 0.3s ease;
 }
 
 .service-img-card:hover .sic-tag svg {
     transform: translateX(4px);
+}
+
+.sic-tag:hover {
+    color: #fff;
+}
+
+.sic-tag:hover svg {
+    stroke: #fff;
+    transform: translateX(8px);
 }
 
 @media (max-width: 1023px) {
@@ -509,6 +520,13 @@
     overflow: hidden;
     aspect-ratio: 3/4;
     cursor: pointer;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    background: #111;
+}
+
+[data-theme='dark'] .treatment-card,
+[data-theme='dark'] .service-img-card {
+    box-shadow: 0 15px 40px rgba(196, 164, 124, 0.15);
 }
 
 .treatment-card img {
@@ -713,9 +731,9 @@
 }
 
 .trust-section {
-    background: var(--nav-dropdown-bg);
+    background: var(--color-primary);
     padding-block: 3.5rem;
-    border-block: 1px solid var(--nav-border);
+    border-block: 1px solid var(--color-primary-dark);
     overflow: hidden;
 }
 
@@ -724,7 +742,7 @@
     font-size: 0.75rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: #fff;
     margin-bottom: 2.5rem;
 }
 
@@ -745,8 +763,8 @@
 .trust-logo {
     font-family: var(--font-logo);
     font-size: 1.8rem;
-    color: var(--nav-text, #1A1A1A);
-    opacity: 0.5;
+    color: #fff;
+    opacity: 1;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     padding: 0 4rem;
@@ -754,8 +772,8 @@
 }
 
 [data-theme='dark'] .trust-logo {
-    opacity: 0.7;
-    color: #F2F2F2;
+    opacity: 1;
+    color: #fff;
 }
 
 @media (hover: hover) {
@@ -764,7 +782,7 @@
     }
     .trust-logo:hover {
         opacity: 1;
-        color: var(--color-primary);
+        color: #1A1A1A;
     }
 }
 

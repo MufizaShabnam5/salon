@@ -209,19 +209,19 @@
 
 .luxe-btn-icon {
     background: transparent;
-    border: 1px solid transparent;
-    color: var(--nav-text);
+    border: 1px solid var(--nav-accent-primary);
+    color: var(--nav-accent-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
 }
 
 .luxe-btn-icon:hover {
-    background: var(--nav-border);
-    color: var(--nav-accent-primary);
+    border-color: var(--nav-border);
+    color: var(--nav-text);
+    background: transparent;
 }
 
 .luxe-btn-icon svg {
@@ -240,8 +240,8 @@
 
 .luxe-btn-text {
     background: transparent;
-    border: 1px solid var(--nav-border);
-    color: var(--nav-text);
+    border: 1px solid var(--nav-accent-primary);
+    color: var(--nav-accent-primary);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -250,8 +250,8 @@
 }
 
 .luxe-btn-text:hover {
-    border-color: var(--nav-accent-primary);
-    color: var(--nav-accent-primary);
+    border-color: var(--nav-border);
+    color: var(--nav-text);
 }
 
 .luxe-btn-primary {
