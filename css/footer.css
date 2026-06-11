@@ -1,15 +1,20 @@
 .luxe-footer {
-    background-color: var(--nav-dropdown-bg);
-    border-top: 1px solid var(--nav-border);
+    background-color: rgba(196, 164, 124, 0.12);
+    border-top: 1px solid rgba(196, 164, 124, 0.2);
     padding: 3rem 0 1rem;
     font-family: var(--nav-font-ui);
     color: var(--nav-text);
     transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
 }
 
+
+
 [data-theme='dark'] .luxe-footer {
     background-color: var(--nav-dropdown-bg);
+    border-top: 1px solid var(--nav-border);
 }
+
+
 
 .footer-grid {
     display: grid;
@@ -114,19 +119,16 @@
     display: flex;
     align-items: center;
     gap: 1.2rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.8rem;
     opacity: 0.8;
     line-height: 1.5;
 }
 
 .contact-list svg {
     box-sizing: border-box;
-    width: 34px;
-    height: 34px;
-    padding: 9px;
-    border: 1px solid var(--color-primary);
-    border-radius: 50%;
-    fill: var(--nav-accent-primary);
+    width: 20px;
+    height: 20px;
+    fill: var(--color-primary);
     flex-shrink: 0;
 }
 

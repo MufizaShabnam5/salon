@@ -257,13 +257,18 @@
 
 .h2-philosophy {
     padding-block: 5rem;
-    background: var(--nav-bg);
+    background: var(--color-primary);
     position: relative;
     overflow: hidden;
 }
 
+[data-theme='dark'] .h2-philosophy {
+    background: var(--nav-bg);
+}
+
 .h2-philosophy::before {
     content: '"';
+    display: none;
     position: absolute;
     top: -2rem;
     left: 50%;
@@ -271,11 +276,17 @@
     font-family: var(--font-logo);
     font-size: 20rem;
     font-weight: 700;
-    color: var(--color-primary);
-    opacity: 0.04;
+    color: #fff;
+    opacity: 0.15;
     line-height: 1;
     pointer-events: none;
     user-select: none;
+}
+
+[data-theme='dark'] .h2-philosophy::before {
+    display: block;
+    color: var(--color-primary);
+    opacity: 0.04;
 }
 
 .h2-philosophy-inner {
@@ -296,16 +307,27 @@
     content: '';
     flex: 1;
     height: 1px;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    opacity: 0.5;
+}
+
+[data-theme='dark'] .h2-philosophy-line::before, 
+[data-theme='dark'] .h2-philosophy-line::after {
     background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+    opacity: 1;
 }
 
 .h2-philosophy-line .label {
     font-size: 0.72rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: #fff;
     white-space: nowrap;
     font-weight: 600;
+}
+
+[data-theme='dark'] .h2-philosophy-line .label {
+    color: var(--color-primary);
 }
 
 .h2-philosophy blockquote {
@@ -322,8 +344,12 @@
     font-size: 0.82rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: #fff;
     font-style: normal;
+}
+
+[data-theme='dark'] .h2-philosophy cite {
+    color: var(--color-primary);
 }
 
 .h2-services {
@@ -346,7 +372,11 @@
     margin-bottom: 2.5rem;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .h2-service-row {
+    box-shadow: 0 15px 40px rgba(196, 164, 124, 0.15);
 }
 
 .h2-service-row.reverse {
@@ -679,6 +709,11 @@
     border-radius: 4px;
     position: relative;
     margin-bottom: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .h2-artisan-img {
+    box-shadow: 0 15px 40px rgba(196, 164, 124, 0.15);
 }
 
 .h2-artisan-img img {

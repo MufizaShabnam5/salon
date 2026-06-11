@@ -75,7 +75,7 @@ body.blog-page[data-theme='dark'] .blog-hero::before {
 
 .blog-hero h1 {
     font-size: clamp(3rem, 7vw, 5rem);
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .blog-hero p {
@@ -508,4 +508,12 @@ body.blog-page[data-theme='dark'] .blog-card-body p, body.blog-page[data-theme='
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.blog-page .btn-primary {
+    color: #FFFFFF;
+}
+
+.blog-page .btn-primary:hover {
+    color: #000000;
 }
