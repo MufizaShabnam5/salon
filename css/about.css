@@ -45,7 +45,7 @@
 .about-hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 70svh;
+    min-height: auto;
     background: var(--nav-bg);
     position: relative;
     overflow: hidden;
@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 2rem 4rem 4%;
+    padding: 5rem 2rem 3rem 4%;
     background: transparent;
     position: relative;
     z-index: 2;
@@ -100,7 +100,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     background: rgba(196, 164, 124, 0.08);
     padding: 0.5rem 1.2rem;
     border-radius: var(--radius-full);
@@ -129,7 +129,7 @@
     color: var(--nav-text);
     font-size: clamp(3rem, 5vw, 5rem);
     line-height: 1.1;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.6rem;
     font-weight: 700;
     letter-spacing: -1px;
 }
@@ -156,11 +156,11 @@
     font-size: 1.05rem;
     line-height: 1.75;
     max-width: 90%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .about-hero-cta {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .about-hero-cta .btn-primary {
@@ -232,12 +232,12 @@
 /* Right Column: Cards & Backgrounds */
 .about-hero-right {
     position: relative;
-    background: url('../images/about_treatment.png') center/cover no-repeat;
+    background: url('../images/about_treatment.png') center/100% 100% no-repeat;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 2rem 2rem 6rem;
+    padding: 2rem;
     z-index: 2;
     clip-path: polygon(120px 0, 100% 0, 100% 100%, 0 100%); /* slanted divider cut */
     margin-left: -120px;
@@ -343,15 +343,12 @@
     }
     
     .about-hero-right {
-        min-height: 480px;
+        min-height: unset;
         height: auto;
-        background: transparent !important;
-        padding: 5rem 1.5rem 4rem 1.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-        align-items: center;
-        justify-content: center;
+        aspect-ratio: 4 / 3;
+        background: url('../images/about_treatment.png') center top/cover no-repeat !important;
+        padding: 0;
+        display: block;
         clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%); /* slanted top cut on mobile */
         margin-left: 0;
         margin-top: -40px;
@@ -379,8 +376,10 @@
     }
     
     .about-hero-right {
-        padding: 4rem 1rem 3rem 1rem;
-        min-height: 400px;
+        padding: 0;
+        min-height: unset;
+        height: auto;
+        aspect-ratio: 4 / 3;
         clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
         margin-top: -30px;
     }
