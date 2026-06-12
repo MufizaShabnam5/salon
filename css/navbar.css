@@ -375,6 +375,33 @@
     }
 }
 
+@media (max-width: 480px) {
+    .luxe-nav-container {
+        padding: 0 1rem;
+    }
+    .luxe-logo {
+        font-size: 1.5rem;
+    }
+    .luxe-logo img {
+        width: 24px !important;
+        height: 24px !important;
+        transform: translateY(-2px) !important;
+    }
+    .luxe-nav-actions {
+        gap: 0.5rem;
+    }
+    .luxe-btn-icon, .luxe-btn-text {
+        padding: 0.3rem 0.6rem;
+    }
+    .luxe-btn-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    .luxe-btn-text {
+        font-size: 0.75rem;
+    }
+}
+
 .luxe-hamburger.active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }

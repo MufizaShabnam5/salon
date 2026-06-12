@@ -25,7 +25,8 @@
 
 .footer-brand .footer-logo {
     margin-bottom: 1rem;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 .footer-description {
