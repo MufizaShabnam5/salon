@@ -50,6 +50,14 @@ img {
     object-fit: cover;
 }
 
+/* Global Logo Fix: Make the square logo a neat circle with a white background so it remains visible and looks good in dark mode */
+img[src*="makeup-black-dress.png"] {
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    mix-blend-mode: normal !important;
+}
+
 a {
     color: var(--color-primary);
     text-decoration: none;
