@@ -50,12 +50,34 @@ img {
     object-fit: cover;
 }
 
-/* Global Logo Fix: Make the square logo a neat circle with a white background so it remains visible and looks good in dark mode */
-img[src*="makeup-black-dress.png"] {
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    mix-blend-mode: normal !important;
+/* Global responsive logo styling */
+.luxe-logo img,
+.auth-brand img,
+.dash-logo img {
+    width: 38px !important;
+    height: 38px !important;
+    margin-right: 0.4rem !important;
+    transform: translateY(-5px) !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+}
+
+@media (max-width: 768px) {
+    .luxe-logo img,
+    .auth-brand img,
+    .dash-logo img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .luxe-logo img,
+    .auth-brand img,
+    .dash-logo img {
+        width: 28px !important;
+        height: 28px !important;
+    }
 }
 
 a {
