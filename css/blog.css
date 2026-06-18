@@ -273,6 +273,11 @@ body.blog-page[data-theme='dark'] .blog-card-body p, body.blog-page[data-theme='
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--nav-text);
 }
 
 .read-more svg {
@@ -281,8 +286,9 @@ body.blog-page[data-theme='dark'] .blog-card-body p, body.blog-page[data-theme='
     transition: transform 0.3s ease;
 }
 
+.read-more:hover svg,
 .blog-card:hover .read-more svg {
-    transform: translateX(4px);
+    transform: translateX(5px);
 }
 
 .post-header {

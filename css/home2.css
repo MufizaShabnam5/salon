@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 7rem 5rem 2rem 6rem;
     position: relative;
     z-index: 2;
@@ -70,8 +72,7 @@
 }
 
 .h2-hero-eyebrow::after {
-    flex: 1;
-    width: auto;
+    /* Removed flex: 1 to make the lines symmetrical when centered */
 }
 
 .h2-hero-left h1 {
@@ -241,6 +242,23 @@
     }
     .h2-hero-img-overlay {
         background: linear-gradient(to top, rgba(14,12,9,0.90) 40%, rgba(14,12,9,0.50) 100%);
+    }
+    .h2-hero-left h1,
+    .h2-hero-eyebrow span {
+        color: #fff !important;
+    }
+    .h2-hero-left h1 em {
+        color: var(--color-primary) !important;
+    }
+    .h2-hero-left p {
+        color: rgba(255,255,255,0.85) !important;
+    }
+    .h2-hero-eyebrow::before, .h2-hero-eyebrow::after {
+        background: #fff !important;
+    }
+    .h2-hero-cta .btn-secondary {
+        color: #fff !important;
+        border-color: rgba(255,255,255,0.5) !important;
     }
     .h2-hero-badge {
         bottom: 2rem;
@@ -479,6 +497,18 @@
 .h2-svc-detail-item .d-val {
     font-size: 1rem;
     font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.h2-svc-detail-item .d-val svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--color-primary);
+    flex-shrink: 0;
+}
+.h2-svc-detail-item .d-val .rupee-icon {
+    color: var(--color-primary);
 }
 
 @media (max-width: 1280px) {
