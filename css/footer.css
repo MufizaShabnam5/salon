@@ -156,8 +156,16 @@
 }
 
 @media (max-width: 1023px) {
+    .luxe-footer {
+        text-align: center;
+    }
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .footer-brand .footer-logo,
+    .footer-socials,
+    .contact-list li {
+        justify-content: center;
     }
 }
 
